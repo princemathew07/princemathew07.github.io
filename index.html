@@ -6,8 +6,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Responsive HTML5 Resume/CV Template for Developers">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
     <link rel="shortcut icon" href="favicon.ico">  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Google Font -->
@@ -84,7 +82,7 @@
                     <p>I am pursuing my PhD in Theoretical Computer Science under the guidance of <font color="#4b9be1">Dr. Sreejith A V</font> in the School of Mathematics and Computer Science at <font color="#4b9be1">Indian Institute of Technology, Goa</font>. Currently, research focused on finding better algorithms for active learning of one-counter automata. A prior research endeavour established that the problems of Equivalence, Regularity, and Covering of Weighted-one-counter automata (over fields) with counter determinacy can be solved in polynomial time.
                     </p>
                     <p><div style="font-weight: bold; display: inline;">Research Interests:</div> Automata Theory &#8226; Formal methods in Computer Science &#8226; Machine Learning &#8226;</p>
-                    <div class="row"><div class="col-md-4"><a href="https://drive.google.com/file/d/10DRYKNld5pfIKxdqDslazgSrGIfNTM41/view?usp=share_link" target="_blank">Download CV</a> (updated Feb 2023)</div></div>
+                    <div class="row"><div class="col-md-4"><a href="https://drive.google.com/file/d/1jUvn3XDa0OR5QXyPz8YN7FAoF4PzXfjK/view?usp=sharing" target="_blank">Download CV</a> (updated Feb 2023)</div></div>
                 </div><!--//summary-->
             </section><!--//section-->
            </div>
@@ -242,6 +240,55 @@
                 <h2 class="section-title"><span class="icon-holder"><i class="fa fa-book"></i></span>Publications</h2>
                 <div class="summary">
                     <button class="collapsible">
+                        <div class="row papertitle">Learning Real-Time One-Counter Automata Using Polynomially Many Queries</div>
+                        <div class="row" style="color:grey;">
+                            Nov 15, 2024 &#8226; arXiv
+                        </div>
+                        <div class="row" style="display: inline;color: gray;">Other Authors: <a href="https://www.labri.fr/perso/vpenelle/">Vincent Penelle</a> &#8226; <a href="https://www.iitgoa.ac.in/~sreejithav/">Sreejith A.V</a></div>
+                    
+                        <!--<div class="row" style="color:grey;">
+                            Jan 31, 2023 &#8226; arXiv
+                        </div>-->
+                    
+                        </button>
+                    <div class="content">
+                        <div class="row">
+                            <div style="font-weight: bold;">Abstract: </div>
+                      <p> In this paper, we introduce a novel method for active learning of deterministic real-time one-counter automata (DROCA). The existing techniques for learning DROCA rely on observing the behaviour of the DROCA up to exponentially large counter-values. Our algorithm eliminates this need and requires only a polynomial number of queries. Additionally, our method differs from existing techniques as we learn a minimal counter-synchronous DROCA, resulting in much smaller counter-examples on equivalence queries. Learning a minimal counter-synchronous automaton cannot be done in polynomial time unless $P = NP$, even in the case of visibly one-counter automata. We use a SAT solver to overcome this difficulty. The solver is used to compute a minimal separating DFA from a given set of positive and negative samples.
+
+                        We prove that the equivalence of two counter-synchronous DROCAs can be checked significantly faster than that of general DROCAs. For visibly one-counter automata, we have discovered an even faster algorithm for equivalence checking. We implemented the proposed learning algorithm and tested it on randomly generated DROCAs. Our evaluations show that the proposed method outperforms the existing techniques on the test set. </p>
+                    </div>
+                    <div class="row"><div class="col-md-2">See publication</div><div class="col-md-3"><a href="https://arxiv.org/abs/2411.08815">click here</a></div></div>
+                    </div>
+                </div><!--//summary-->
+                <div class="summary">
+                    <button class="collapsible">
+                        <div class="row papertitle">Equivalence of Deterministic Weighted Real-time One-Counter Automata</div>
+                        <div class="row" style="color:grey;">
+                            Feb 3, 2025 &#8226; 11th Indian Conference on Logic and its Applications (ICLA 2025)
+                        </div>
+                        <div class="row" style="display: inline;color: gray;">Other Authors: <a href="https://www.labri.fr/perso/vpenelle/">Vincent Penelle</a> &#8226; <a href="https://www.imsc.res.in/prakash_saivasan">Prakash Saivasan</a> &#8226; <a href="https://www.iitgoa.ac.in/~sreejithav/">Sreejith A.V</a></div>
+                    
+                        <!--<div class="row" style="color:grey;">
+                            Jan 31, 2023 &#8226; arXiv
+                        </div>-->
+                    
+                        </button>
+                    <div class="content">
+                        <div class="row">
+                            <div style="font-weight: bold;">Abstract: </div>
+                      <p> In this paper, we are interested in weighted one-counter automata whose transitions are assigned a weight from a fixed field. In particular, we consider deterministic weighted real-time one-counter automaton (DWROCA). A DWROCA is a deterministic real-time one-counter automaton whose transitions are assigned a weight. Two DWROCAs are equivalent if every word accepted by one is accepted by the other with the same weight. 
+                        DWROCA is a sub-class of weighted one-counter automata with counter determinacy. It is known that the equivalence problem for this model is in P. This paper gives a simpler proof for checking the equivalence of two DWROCAs.
+                        This gives a better polynomial-time algorithm for checking the equivalence of DWROCAs.</p>
+                    </div>
+                    
+                    
+                    <div class="row"><div class="col-md-2">See publication</div><div class="col-md-3"><a href="">coming soon</a></div></div>
+                    <div class="row"><div class="col-md-2">Full version (arXiv)</div><div class="col-md-3"><a href="https://arxiv.org/abs/2411.03066">click here</a></div></div>
+                    </div>
+                    </div><!--//summary-->
+                <div class="summary">
+                    <button class="collapsible">
                         <div class="row papertitle">Weighted One-Deterministic-Counter Automata</div>
                         <div class="row" style="color:grey;">
                             Dec 12, 2023 &#8226; 43rd IARCS Annual Conference on Foundations of Software Technology and Theoretical Computer Science (FSTTCS 2023)
@@ -264,7 +311,7 @@
                     </div><!--//summary-->
                 <div class="summary">
                     <button class="collapsible">
-                        <div class="row papertitle">CAP: A Cellular Automata based Fuzzy Classifier</div>
+                        <div class="row papertitle">CAP: A Cellular Automata Based Fuzzy Classifier</div>
                         <div class="row" style="color:grey;">
                             Feb 26, 2022 &#8226; Materials Today Proceedings
                         </div>
@@ -283,11 +330,11 @@
                                     </div><!--//summary-->
 <div class="summary">
 <button class="collapsible">
-    <div class="row papertitle">Optical Music Recognition using Image Processing and Machine Learning</div>
+    <div class="row papertitle">Optical Music Recognition Using Image Processing and Machine Learning</div>
     <div class="row" style="color:grey;">
         Aug 11, 2018 &#8226; International Journal of Computer Sciences and Eng.
     </div>
-    <div class="row" style="display: inline;color: gray;">Other Authors: <a href="https://www.linkedin.com/in/rahul-vijayakumar-95bb703a/">Rahul Vijayakumar</a> &#8226; <a href="https://www.linkedin.com/in/aju-tom-kuriakose-25611b67/">Aju Tom Kuriakose</a> &#8226; <a href="https://www.linkedin.com/in/jesmy-sunny-675195144/">Jesmy Sunny</a> &#8226; <a href="https://vidyaacademy.ac.in/staff_details.php?staff_id=317&&dep_id=3#">Dr. Ramani Bai V</a></div>
+    <div class="row" style="display: inline;color: gray;">Other Authors: <a href="https://www.adishankara.ac.in/department/faculty/398">Dr. Ramani Bai V</a> &#8226; <a href="https://www.linkedin.com/in/jesmy-sunny-675195144/">Jesmy Sunny</a> &#8226; <a href="https://www.linkedin.com/in/aju-tom-kuriakose-25611b67/">Aju Tom Kuriakose</a> &#8226; <a href="https://www.linkedin.com/in/rahul-vijayakumar-95bb703a/">Rahul Vijayakumar</a></div>
 
     </button>
 <div class="content">
@@ -300,11 +347,11 @@
 </div><!--//summary-->
 
                 <button class="collapsible">
-                    <div class="row papertitle">A Survey on Fuzzy Logic & Fuzzy Classifiers based on Continuous Cellular Automata</div>
+                    <div class="row papertitle">A Survey on Fuzzy Logic & Fuzzy Classifiers Based on Continuous Cellular Automata</div>
                     <div class="row" style="color:grey;">
                         Aug 20, 2016 &#8226; National Conference on Technological Trends (NCTT)
                     </div>
-                    <div class="row" style="display: inline;color: gray;">Other Authors: <a href="https://www.cet.ac.in/ug-dean/">Dr. M Abdul Nizar</a> &#8226;</div>
+                    <div class="row" style="display: inline;color: gray;">Other Authors: <a href="https://cse.cet.ac.in/amo-team/dr-m-abdul-nizar/">Dr. M Abdul Nizar</a> &#8226;</div>
                 
                     </button>
                 <div class="content">
