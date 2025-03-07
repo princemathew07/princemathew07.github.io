@@ -22,10 +22,10 @@
         <div class="" id="myNavbar">
           <ul class="mainnavbar">
             <li class="navitem" id="abouthead"><a href="#home" on-click="selected">ABOUT</a></li>
-            <li class="navitem" id="exphead"><a href="#experience" >EXPERIENCE</a></li>
-            <li class="navitem" id="eduhead"><a href="#education">EDUCATION</a></li>
             <li class="navitem" id="pubhead"><a href="#publication">PUBLICATIONS</a></li>
             <li class="navitem" id="talkhead"><a href="#talk">RECORDED TALKS</a></li>
+            <li class="navitem" id="exphead"><a href="#experience" >EXPERIENCE</a></li>
+            <li class="navitem" id="eduhead"><a href="#education">EDUCATION</a></li>
             <li class="navitem" id="projecthead"><a href="#project">PROJECTS</a></li>
             <li class="navitem" id="tahead"><a href="#ta">TEACHING ASSISTANCE</a></li>
           </ul>
@@ -80,7 +80,8 @@
                 <!-- <h2 class="section-title"><span class="icon-holder"><i class="fas fa-user"></i></span>About me</h2> -->
                 <div class="summaryprof">
                     <p>I am pursuing my PhD in Theoretical Computer Science under the guidance of <font color="#4b9be1">Dr. Sreejith A V</font> in the School of Mathematics and Computer Science at <font color="#4b9be1">Indian Institute of Technology, Goa</font>. 
-                        Currently, our research focuses on developing improved algorithms for the active learning of one-counter automata. Recently, we demonstrated that deterministic real-time one-counter automata (DROCAs) can be efficiently learned using a polynomial number of queries. This represents a significant advancement over previous algorithms, which required an exponential number of queries for learning DROCAs.
+                        Our current research is centered on developing better algorithms for the active learning of one-counter automata. 
+                        Recently, we proved that learning deterministic one-counter automata (DOCAs) can be done in polynomial time. This is the first polynomial time algorithm for learning DOCAs. Previously, we demonstrated that deterministic real-time one-counter automata (DROCAs) can be efficiently learned using a polynomial number of queries, significantly improving upon earlier algorithms that required an exponential number of queries.
                     </p>
                     <p>
                         Earlier research also established that problems, including equivalence, regularity, and covering for weighted one-counter automata (over fields) with counter determinacy, can be solved in polynomial time. This finding mark a promising step toward addressing the open problem of equivalence of weighted one-counter automata.
@@ -99,7 +100,280 @@
         <div class="mwrap">
             
             <div class="mainbody">
-            
+                <section class="section summary-section" id="publication">
+                    <h2 class="section-title"><span class="icon-holder"><i class="fa fa-book"></i></span>Publications</h2>
+                    <div class="summary">
+                        <button class="collapsible">
+                            <div class="row papertitle">Learning Deterministic One-Counter Automata in Polynomial Time</div>
+                            <div class="row" style="color:grey;">
+                                Feb xx, 2025 &#8226; arXiv
+                            </div>
+                            <div class="row" style="display: inline;color: gray;">Other Authors: <a href="https://www.labri.fr/perso/vpenelle/" target="_blank">Vincent Penelle</a> &#8226; <a href="https://www.iitgoa.ac.in/~sreejithav/" target="_blank">Sreejith A.V</a></div>
+                        
+                            <!--<div class="row" style="color:grey;">
+                                Jan 31, 2023 &#8226; arXiv
+                            </div>-->
+                        
+                            </button>
+                        <div class="content">
+                            <div class="row">
+                                <div style="font-weight: bold;">Abstract: </div>
+                          <p> We give an active learning algorithm for deterministic one-counter automata (DOCAs) where the learner can ask the teacher membership and minimal equivalence queries. The algorithm called OL* learns a DOCA in time polynomial in the size of the smallest DOCA, recognising the target language.
+
+                            All existing algorithms for learning DOCAs, even for the subclasses of deterministic real-time one-counter automata (DROCAs) and visibly one-counter automata (VOCAs), in the worst case, run in time exponential in the size of the DOCA under learning. Furthermore, previous learning algorithms are ''grey-box'' algorithms relying on an additional query type - counter value queries - where the teacher must return the counter value for a given word. Our algorithm is a ''black-box'' algorithm, that runs in polynomial time and can learn DOCAs without any restriction.
+                            
+                            It is known that the minimisation of VOCAs is NP-hard. However, OL* can be used for approximate minimisation of DOCAs. In this case, the output size is at most polynomial in the size of a minimal DOCA. </p>
+                        </div>
+                        <div class="row"><div class="col-md-2">Full version (arXiv)</div><div class="col-md-3"><a href="http://arxiv.org/abs/2503.04525" target="_blank">click here</a></div></div>
+                        </div>
+                    </div><!--//summary-->
+                    <div class="summary">
+                        <button class="collapsible">
+                            <div class="row papertitle">Learning Real-Time One-Counter Automata Using Polynomially Many Queries</div>
+                            <div class="row" style="color:grey;">
+                                May 5, 2025 &#8226; 31st International Conference on Tools and Algorithms for the Construction and Analysis of Systems (TACAS 2025) - To appear
+                            </div>
+                            <div class="row" style="display: inline;color: gray;">Other Authors: <a href="https://www.labri.fr/perso/vpenelle/" target="_blank">Vincent Penelle</a> &#8226; <a href="https://www.iitgoa.ac.in/~sreejithav/" target="_blank">Sreejith A.V</a></div>
+                        
+                            <!--<div class="row" style="color:grey;">
+                                Jan 31, 2023 &#8226; arXiv
+                            </div>-->
+                        
+                            </button>
+                        <div class="content">
+                            <div class="row">
+                                <div style="font-weight: bold;">Abstract: </div>
+                          <p> In this paper, we introduce a novel method for active learning of deterministic real-time one-counter automata (DROCA). The existing techniques for learning DROCA rely on observing the behaviour of the DROCA up to exponentially large counter-values. Our algorithm eliminates this need and requires only a polynomial number of queries. Additionally, our method differs from existing techniques as we learn a minimal counter-synchronous DROCA, resulting in much smaller counter-examples on equivalence queries. Learning a minimal counter-synchronous automaton cannot be done in polynomial time unless $P = NP$, even in the case of visibly one-counter automata. We use a SAT solver to overcome this difficulty. The solver is used to compute a minimal separating DFA from a given set of positive and negative samples.
+    
+                            We prove that the equivalence of two counter-synchronous DROCAs can be checked significantly faster than that of general DROCAs. For visibly one-counter automata, we have discovered an even faster algorithm for equivalence checking. We implemented the proposed learning algorithm and tested it on randomly generated DROCAs. Our evaluations show that the proposed method outperforms the existing techniques on the test set. </p>
+                        </div>
+                        <div class="row"><div class="col-md-2">See publication</div><div class="col-md-3"><a target="_blank">coming soon</a></div></div>
+                        <div class="row"><div class="col-md-2">Full version (arXiv)</div><div class="col-md-3"><a href="https://arxiv.org/abs/2411.08815" target="_blank">click here</a></div></div>
+                        </div>
+                    </div><!--//summary-->
+                    <div class="summary">
+                        <button class="collapsible">
+                            <div class="row papertitle">Equivalence of Deterministic Weighted Real-time One-Counter Automata</div>
+                            <div class="row" style="color:grey;">
+                                Feb 3, 2025 &#8226; 11th Indian Conference on Logic and its Applications (ICLA 2025) - To appear
+                            </div>
+                            <div class="row" style="display: inline;color: gray;">Other Authors: <a href="https://www.labri.fr/perso/vpenelle/" target="_blank">Vincent Penelle</a> &#8226; <a href="https://www.imsc.res.in/prakash_saivasan" target="_blank">Prakash Saivasan</a> &#8226; <a href="https://www.iitgoa.ac.in/~sreejithav/" target="_blank">Sreejith A.V</a></div>
+                        
+                            <!--<div class="row" style="color:grey;">
+                                Jan 31, 2023 &#8226; arXiv
+                            </div>-->
+                        
+                            </button>
+                        <div class="content">
+                            <div class="row">
+                                <div style="font-weight: bold;">Abstract: </div>
+                          <p> In this paper, we are interested in weighted one-counter automata whose transitions are assigned a weight from a fixed field. In particular, we consider deterministic weighted real-time one-counter automaton (DWROCA). A DWROCA is a deterministic real-time one-counter automaton whose transitions are assigned a weight. Two DWROCAs are equivalent if every word accepted by one is accepted by the other with the same weight. 
+                            DWROCA is a sub-class of weighted one-counter automata with counter determinacy. It is known that the equivalence problem for this model is in P. This paper gives a simpler proof for checking the equivalence of two DWROCAs.
+                            This gives a better polynomial-time algorithm for checking the equivalence of DWROCAs.</p>
+                        </div>
+                        
+                        
+                        <div class="row"><div class="col-md-2">See publication</div><div class="col-md-3"><a target="_blank">coming soon</a></div></div>
+                        <div class="row"><div class="col-md-2">Full version (arXiv)</div><div class="col-md-3"><a href="https://arxiv.org/abs/2411.03066" target="_blank">click here</a></div></div>
+                        </div>
+                        </div><!--//summary-->
+                    <div class="summary">
+                        <button class="collapsible">
+                            <div class="row papertitle">Weighted One-Deterministic-Counter Automata</div>
+                            <div class="row" style="color:grey;">
+                                Dec 12, 2023 &#8226; 43rd IARCS Annual Conference on Foundations of Software Technology and Theoretical Computer Science (FSTTCS 2023)
+                            </div>
+                            <div class="row" style="display: inline;color: gray;">Other Authors: <a href="https://www.labri.fr/perso/vpenelle/" target="_blank">Vincent Penelle</a> &#8226; <a href="https://www.imsc.res.in/prakash_saivasan" target="_blank">Prakash Saivasan</a> &#8226; <a href="https://www.iitgoa.ac.in/~sreejithav/" target="_blank">Sreejith A.V</a></div>
+                        
+                            <!--<div class="row" style="color:grey;">
+                                Jan 31, 2023 &#8226; arXiv
+                            </div>-->
+                        
+                            </button>
+                        <div class="content">
+                            <div class="row">
+                                <div style="font-weight: bold;">Abstract: </div>
+                          <p> We introduce weighted one-deterministic-counter automata (odca). These are weighted one-counter automata (oca) with the property of counter-determinacy, meaning that all paths labelled by a given word starting from the initial configuration have the same counter-effect. Weighted odcas are a strict extension of weighted visibly ocas, which are weighted ocas where the input alphabet determines the actions on the counter. We present a novel problem called the co-VS (complement to a vector space) reachability problem for weighted odcas over fields, which seeks to determine if there exists a run from a given configuration of a weighted odca to another configuration whose weight vector lies outside a given vector space. We establish two significant properties of witnesses for co-VS reachability: they satisfy a pseudo-pumping lemma, and the lexicographically minimal witness has a special form. It follows that the co-VS reachability problem is in 𝖯. These reachability problems help us to show that the equivalence problem of weighted odcas over fields is in 𝖯 by adapting the equivalence proof of deterministic real-time ocas [Stanislav Böhm and Stefan Göller, 2011] by Böhm et al. This is a step towards resolving the open question of the equivalence problem of weighted ocas. Finally, we demonstrate that the regularity problem, the problem of checking whether an input weighted odca over a field is equivalent to some weighted automaton, is in 𝖯. We also consider boolean odcas and show that the equivalence problem for (non-deterministic) boolean odcas is in PSPACE, whereas it is undecidable for (non-deterministic) boolean ocas.</p>
+                        </div>
+                        <div class="row"><div class="col-md-2">See publication</div><div class="col-md-3"><a href="https://doi.org/10.4230/LIPIcs.FSTTCS.2023.39" target="_blank">click here</a></div></div>
+                        <div class="row"><div class="col-md-2">Full version (arXiv)</div><div class="col-md-3"><a href="http://arxiv.org/abs/2301.13456" target="_blank">click here</a></div></div>
+                        </div>
+                        </div><!--//summary-->
+                    <div class="summary">
+                        <button class="collapsible">
+                            <div class="row papertitle">CAP: A Cellular Automata Based Fuzzy Classifier</div>
+                            <div class="row" style="color:grey;">
+                                Feb 26, 2022 &#8226; International Conference on Artificial Intelligence & Energy Systems
+                            </div>
+                            <div class="row" style="display: inline;color: gray">Other Authors: <a href="https://cse.cet.ac.in/amo-team/dr-m-abdul-nizar/" target="_blank">Dr. M Abdul Nizar</a> &#8226;</div>
+                       
+                            </button>
+                        <div class="content">
+                            <div class="row">
+                                <div style="font-weight: bold;">Abstract: </div>
+                          <p>This paper proposes an efficient classifier based on continuous cellular automata with promising running time and classification accuracy. The classifier model is capable of processing data sets containing large number of numeric as well as non-numeric attributes. It performs effective pre-processing of numeric and nominal attributes to identify the most relevant ones. It also prunes out unnecessary computations by limiting stabilisation of the cellular automata during the training phase. The classifier also employs various techniques to reduce the number of incorrect classifications and overfitting of data. A number of experiments were conducted to evaluate the performance of the proposed classifier by changing various parameters during the training phase. Evaluations show that the classifier out-performs existing rule-based classifiers in terms of accuracy.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">See publication</div><div class="col-md-3"><a href="https://doi.org/10.1016/j.matpr.2022.02.284" target="_blank">click here</a></div></div>
+                        </div>
+                        
+                                        </div><!--//summary-->
+    <div class="summary">
+    <button class="collapsible">
+        <div class="row papertitle">Optical Music Recognition Using Image Processing and Machine Learning</div>
+        <div class="row" style="color:grey;">
+            Nov 30, 2018 &#8226; International Journal of Computer Sciences and Eng.
+        </div>
+        <div class="row" style="display: inline;color: gray;">Other Authors: <a href="https://www.adishankara.ac.in/department/faculty/398" target="_blank">Dr. Ramani Bai V</a> &#8226; <a href="https://www.linkedin.com/in/jesmy-sunny-675195144/" target="_blank">Jesmy Sunny</a> &#8226; <a href="https://www.linkedin.com/in/aju-tom-kuriakose-25611b67/" target="_blank">Aju Tom Kuriakose</a> &#8226; <a href="https://www.linkedin.com/in/rahul-vijayakumar-95bb703a/" target="_blank">Rahul Vijayakumar</a></div>
+    
+        </button>
+    <div class="content">
+        <div class="row">
+            <div style="font-weight: bold;">Abstract: </div>
+      <p>The ability to understand music score is a basic requirement for learning music. This paper proposes a mathematical method to find the pitch of a musical note from digital image of sheet music and a classification-based method for detecting the duration of a music note. In a sheet music, the horizontal direction can be associated with the notes starting time, whilst the vertical direction can be associated with pitch. The symbols used for a note represents its duration. Music scores sometimes need to be transposed or slightly modified, having the score in a digital format greatly reduces the time and effort required to do these. In this paper, we make use of techniques such as Run Length Encoding (RLE), Horizontal projection and Vertical Projection (X & Y projections) for Segmentation and attribute extraction. For note recognition, a classifier based system is used which returns the duration of the given input symbol. The pitch, duration and position of notes are finally given as input to a midi generation module, which generates a MIDI file corresponding to the given input music notation. There are several other applications to Optical Music Recognition (OMR) systems. Converting music scores in Braille code for the blind is yet another application of an OMR system.</p>
+    </div>
+    <div class="row"><div class="col-md-2">See publication</div><div class="col-md-3"><a href="https://www.ijcseonline.org/full_spl_paper_view.php?paper_id=519" target="_blank">click here</a></div></div>
+    </div>
+    </div><!--//summary-->
+    
+                    <button class="collapsible">
+                        <div class="row papertitle">A Survey on Fuzzy Logic & Fuzzy Classifiers Based on Continuous Cellular Automata</div>
+                        <div class="row" style="color:grey;">
+                            Aug 20, 2016 &#8226; National Conference on Technological Trends (NCTT)
+                        </div>
+                        <div class="row" style="display: inline;color: gray;">Other Authors: <a href="https://cse.cet.ac.in/amo-team/dr-m-abdul-nizar/" target="_blank">Dr. M Abdul Nizar</a> &#8226;</div>
+                    
+                        </button>
+                    <div class="content">
+                        <div class="row">
+                            <div style="font-weight: bold;">Abstract: </div>
+                      <p>Classification is one among the most studied supervised learning techniques. There are a variety of classifiers and classifying algorithms. Fuzzy Classifiers are classifiers which deals with varying degrees of membership, unlike crisp classifiers which have only a true or false value for membership of an instance to a class. Cellular Automata is one of the ways of performing computations which necessitates extremely the processing of data at a high speed. The use of cellular automata in classification is a promising area of study. Using Continuous Cellular Automata helps us to incorporate the concept of fuzziness into the Classifier using Cellular Automata. This survey studies the basic concept of fuzzy logic, cellular automata and the types of neighbourhood & diffusion rules in use, examines the concept of Continuous cellular automata and describes various defuzzification processes in brief. We also study an existing fuzzy classifier using continuous cellular automata and its working.</p>
+                    </div>
+                    <div class="row"><div class="col-md-2">See publication</div><div class="col-md-3"><a href="https://github.com/prince-iitgoa/Publications/blob/main/NCCT2016.pdf" target="_blank">click here</a></div></div>
+                    </div>
+                    
+                </section>
+                <section class="section summary-section" id="talk">
+                    <h2 class="section-title"><span class="icon-holder"><i class="fas fa-video"></i></span>Recorded Talks</h2>
+                    <div class="summary">
+                        <button class="collapsible">
+                            <div class="row papertitle">Learning Real-Time One-Counter Automata Using Polynomially Many Queries</div>
+                            <div class="row" style="color:grey;">
+                                Research Highlights in Programming Languages (RHPL 2024)</div>
+                            <div class="row"> IIT Gandhinagar, India &#8226; 
+                                Dec 18, 2024 
+                            </div>
+                            <!--<div class="row" style="color:grey;">
+                                Jan 31, 2023 &#8226; arXiv
+                            </div>-->
+                        
+                        </button>
+                        <div class="content">
+                            <div class="row">
+                                <div style="font-weight: bold;">Abstract: </div>
+                          <p>In this talk, we introduce a novel method for active learning of deterministic real-time one-counter automata (DROCA). The existing techniques for learning DROCA rely on observing the behaviour of the DROCA up to exponentially large counter-values. Our algorithm eliminates this need and requires only a polynomial number of queries. Additionally, our method differs from existing techniques as we learn a minimal counter-synchronous DROCA, resulting in much smaller counter-examples on equivalence queries. Learning a minimal counter-synchronous automaton cannot be done in polynomial time unless $P = NP$, even in the case of visibly one-counter automata. We use a SAT solver to overcome this difficulty. The solver is used to compute a minimal separating DFA from a given set of positive and negative samples.
+                            We implemented the proposed learning algorithm and tested it on randomly generated DROCAs. Our evaluations show that the proposed method outperforms the existing techniques on the test set.  </p>
+                        </div>
+                        <div class="row"><div class="col-md-2">Watch Talk</div><div class="col-md-3"><a href="https://www.youtube.com/live/mZ-DoJV8M9M?si=_0uTLdy1RQUpB20X\&t=3300" target="_blank">click here</a></div></div>
+                        </div>
+                    </div>
+                    <div class="summary">
+                        <button class="collapsible">
+                            <div class="row papertitle">Learning One-Counter Automata Using SAT Solver</div>
+                            <div class="row" style="color:grey;">
+                                Highlights of Logic, Games and Automata (Highlights 2024)</div>
+                            <div class="row"> University of Bordeaux, France &#8226; 
+                                Sep 19, 2024 
+                            </div>
+                            <!--<div class="row" style="color:grey;">
+                                Jan 31, 2023 &#8226; arXiv
+                            </div>-->
+                        
+                        </button>
+                        <div class="content">
+                            <div class="row">
+                                <div style="font-weight: bold;">Abstract: </div>
+                          <p>In this presentation, we introduce a novel method for active learning of a minimal-sized visibly one-counter automaton (VOCA) using SAT solver. We follow Angluin's L* algorithm. The algorithm uses only a polynomial number of membership or equivalence queries. All the existing literature, including the algorithm presented by Neider and Löding for learning VOCA, requires exponentially many queries relative to the size of a minimal VOCA recognising the given language. Our approach eliminates the necessity to observe the VOCAs behaviour up to exponentially large counter values. This sets it apart from existing techniques that rely on identifying repetitive patterns in behaviour graphs of exponential size.
+    
+                            Michaliszyn and Otop observed that the problem of finding the minimal VOCA is NP-Complete.
+                            If a polynomial time algorithm for learning the minimal VOCA exists, it could be employed to minimise VOCA in polynomial time. Consequently, a learning algorithm for VOCA that achieves minimal representation in polynomial time does not exist.
+                            
+                            In the latter part of the work, we looked at learning Deterministic real-time one-counter automata (DROCA). However, we make use of an additional query, called counter-value query - the student gives the teacher a word, and the teacher returns the counter-value reached on traversing the word in the DROCA.
+                            We show that learning DROCA can done using polynomially many queries within this framework.
+                            This improves the existing result by Bruyère et al. that needed an exponential number of queries, space and time for learning DROCA. </p>
+                        </div>
+                        <div class="row"><div class="col-md-2">Watch Talk</div><div class="col-md-3"><a href="https://plmbox.math.cnrs.fr/d/842a02badc75464b9cdd/files/?p=%2F4-Thursday%2FSession_6_Automata%2F2-Prince_Mathew.mp4" target="_blank">click here</a></div><div class="col-md-2">Slides</div><div class="col-md-3"><a href="https://plmbox.math.cnrs.fr/d/842a02badc75464b9cdd/files/?p=%2F4-Thursday%2FSession_6_Automata%2F2-Prince_Mathew.pdf" target="_blank">click here</a></div></div>
+                        </div>
+                    </div>
+                    <div class="summary">
+                        <button class="collapsible">
+                            <div class="row papertitle">Weighted One-Deterministic-Counter Automata</div>
+                            <div class="row" style="color:grey;">
+                                Foundations of Software Technology and Theoretical Computer Science 2023 (FSTTCS 2023)
+                            </div>
+                            <div class="row">
+                                IIIT Hyderabad, India &#8226; Dec 19, 2023 
+                            </div>
+                            <!--<div class="row" style="color:grey;">
+                                Jan 31, 2023 &#8226; arXiv
+                            </div>-->
+                        
+                        </button>
+                        <div class="content">
+                            <div class="row">
+                                <div style="font-weight: bold;">Abstract: </div>
+                          <p>We introduce weighted one-deterministic-counter automata (odca). These are weighted one-counter automata (oca) with the property of counter-determinacy, meaning that all paths labelled by a given word starting from the initial configuration have the same counter-effect. Weighted odcas are a strict extension of weighted visibly ocas, which are weighted ocas where the input alphabet determines the actions on the counter. We present a novel problem called the co-VS (complement to a vector space) reachability problem for weighted odcas over fields, which seeks to determine if there exists a run from a given configuration of a weighted odca to another configuration whose weight vector lies outside a given vector space. We establish two significant properties of witnesses for co-VS reachability: they satisfy a pseudo-pumping lemma, and the lexicographically minimal witness has a special form. It follows that the co-VS reachability problem is in 𝖯. These reachability problems help us to show that the equivalence problem of weighted odcas over fields is in 𝖯 by adapting the equivalence proof of deterministic real-time ocas [Stanislav Böhm and Stefan Göller, 2011] by Böhm et al. This is a step towards resolving the open question of the equivalence problem of weighted ocas. Finally, we demonstrate that the regularity problem, the problem of checking whether an input weighted odca over a field is equivalent to some weighted automaton, is in 𝖯. We also consider boolean odcas and show that the equivalence problem for (non-deterministic) boolean odcas is in PSPACE, whereas it is undecidable for (non-deterministic) boolean ocas.
+                            </p>
+                        </div>
+                        <div class="row"><div class="col-md-3">Watch Talk</div><div class="col-md-6"><a href="https://www.youtube.com/live/nWBfj0wzY18?si=X1AjFms3EN-VcHls&t=9895" target="_blank">click here</a></div></div>
+                        </div>
+                    </div>
+                    <div class="summary">
+                        <button class="collapsible">
+                            <div class="row papertitle">One-Deterministic-Counter Automata</div>
+                            <div class="row" style="color:grey;">
+                                Formal Methods Update Meeting 2023 (FM Update 2023)
+                            </div>
+                            <div class="row">
+                                IIT Goa, India &#8226; June 30, 2023 
+                            </div>
+                            <!--<div class="row" style="color:grey;">
+                                Jan 31, 2023 &#8226; arXiv
+                            </div>-->
+                        
+                        </button>
+                        <div class="content">
+                            <div class="row">
+                                <div style="font-weight: bold;">Abstract: </div>
+                          <p>We introduce One-deterministic-counter automata (ODCA), one-counter automata where all runs labeled by a given word exhibit the same counter effect. The talk will specifically focus on weighted ODCAs. We present a novel problem known as the co-VS (complement to a vector space) reachability problem. By leveraging properties of matrices and vector spaces, a pseudo-pumping lemma is established, proving that the Co-VS reachability problem is in P. Furthermore, we demonstrate that the lexicographically minimal witness for this problem has a special form. Consequently, it follows that the equivalence problem of ODCAs is also in P. This is joint work with Dr. Sreejith A.V., Dr. Vincent Penelle, and Dr. Prakash Saivasan.
+                          </p>
+                        </div>
+                        <div class="row"><div class="col-md-3">Watch Talk</div><div class="col-md-6"><a href="https://www.youtube.com/watch?v=dkBPlRkqrrw" target="_blank">click here</a></div></div>
+                        </div>
+                    </div>
+                    <div class="summary">
+                        <button class="collapsible">
+                            <div class="row papertitle">One-Deterministic-Counter Automata</div>
+                            <div class="row" style="color:grey;">
+                                Highlights of Logic, Games and Automata (Highlights 2023)</div>
+                            <div class="row"> University of Kassel, Germany &#8226; 
+                                Jul 26, 2023 
+                            </div>
+                            <!--<div class="row" style="color:grey;">
+                                Jan 31, 2023 &#8226; arXiv
+                            </div>-->
+                        
+                        </button>
+                        <div class="content">
+                            <div class="row">
+                                <div style="font-weight: bold;">Abstract: </div>
+                          <p>We introduce one deterministic-counter automata (ODCA), which are one-counter automata where all runs labelled by a given word have the same counter effect, a property we call counter-determinacy. ODCAs are an extension of visibly one-counter automata - one-counter automata (OCA), where the input alphabet determines the actions on the counter. They are a natural way to introduce non-determinism/weights to OCAs while maintaining the decidability of crucial problems that are undecidable on general OCAs. For example, the equivalence problem is decidable for deterministic OCAs, whereas it is undecidable for non-deterministic OCAs. We consider both non-deterministic and weighted ODCAs. Our work shows that the equivalence problem is decidable in polynomial time for weighted ODCAs over a field and polynomial space for non-deterministic ODCAs. As a corollary, we get that the regularity problem, i.e., the problem of checking whether an input weighted ODCA is equivalent to some weighted automaton, is also in polynomial time. Furthermore, we show that the covering and coverable equivalence problems for uninitialised weighted ODCAs are decidable in polynomial time. We also introduce a few reachability problems that are of independent interest and show that they are in P. These reachability problems later help in solving the equivalence problem.
+                          </p>
+                        </div>
+                        <div class="row"><div class="col-md-3">Watch Talk</div><div class="col-md-6"><a href="https://uni-kassel.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=097fe15b-74dd-47c1-bf23-b04b00c98cf6&start=1128.1917782978653" target="_blank">click here</a></div></div>
+                        </div>
+                    </div>
+                </section>
             <section class="section experiences-section" id="experience">
                 <h2 class="section-title"><span class="icon-holder"><i class="fas fa-briefcase"></i></span>Experience</h2>
                 
@@ -240,255 +514,7 @@
                     <div class="col-md-3"><div class="time">1995 - 2010</div></div></div>
                 </div><!--//item-->
             </div><!--//education-container-->
-            <section class="section summary-section" id="publication">
-                <h2 class="section-title"><span class="icon-holder"><i class="fa fa-book"></i></span>Publications</h2>
-                <div class="summary">
-                    <button class="collapsible">
-                        <div class="row papertitle">Learning Real-Time One-Counter Automata Using Polynomially Many Queries</div>
-                        <div class="row" style="color:grey;">
-                            May 5, 2025 &#8226; 31st International Conference on Tools and Algorithms for the Construction and Analysis of Systems (TACAS 2025) - To appear
-                        </div>
-                        <div class="row" style="display: inline;color: gray;">Other Authors: <a href="https://www.labri.fr/perso/vpenelle/" target="_blank">Vincent Penelle</a> &#8226; <a href="https://www.iitgoa.ac.in/~sreejithav/" target="_blank">Sreejith A.V</a></div>
-                    
-                        <!--<div class="row" style="color:grey;">
-                            Jan 31, 2023 &#8226; arXiv
-                        </div>-->
-                    
-                        </button>
-                    <div class="content">
-                        <div class="row">
-                            <div style="font-weight: bold;">Abstract: </div>
-                      <p> In this paper, we introduce a novel method for active learning of deterministic real-time one-counter automata (DROCA). The existing techniques for learning DROCA rely on observing the behaviour of the DROCA up to exponentially large counter-values. Our algorithm eliminates this need and requires only a polynomial number of queries. Additionally, our method differs from existing techniques as we learn a minimal counter-synchronous DROCA, resulting in much smaller counter-examples on equivalence queries. Learning a minimal counter-synchronous automaton cannot be done in polynomial time unless $P = NP$, even in the case of visibly one-counter automata. We use a SAT solver to overcome this difficulty. The solver is used to compute a minimal separating DFA from a given set of positive and negative samples.
-
-                        We prove that the equivalence of two counter-synchronous DROCAs can be checked significantly faster than that of general DROCAs. For visibly one-counter automata, we have discovered an even faster algorithm for equivalence checking. We implemented the proposed learning algorithm and tested it on randomly generated DROCAs. Our evaluations show that the proposed method outperforms the existing techniques on the test set. </p>
-                    </div>
-                    <div class="row"><div class="col-md-2">See publication</div><div class="col-md-3"><a target="_blank">coming soon</a></div></div>
-                    <div class="row"><div class="col-md-2">Full version (arXiv)</div><div class="col-md-3"><a href="https://arxiv.org/abs/2411.08815" target="_blank">click here</a></div></div>
-                    </div>
-                </div><!--//summary-->
-                <div class="summary">
-                    <button class="collapsible">
-                        <div class="row papertitle">Equivalence of Deterministic Weighted Real-time One-Counter Automata</div>
-                        <div class="row" style="color:grey;">
-                            Feb 3, 2025 &#8226; 11th Indian Conference on Logic and its Applications (ICLA 2025) - To appear
-                        </div>
-                        <div class="row" style="display: inline;color: gray;">Other Authors: <a href="https://www.labri.fr/perso/vpenelle/" target="_blank">Vincent Penelle</a> &#8226; <a href="https://www.imsc.res.in/prakash_saivasan" target="_blank">Prakash Saivasan</a> &#8226; <a href="https://www.iitgoa.ac.in/~sreejithav/" target="_blank">Sreejith A.V</a></div>
-                    
-                        <!--<div class="row" style="color:grey;">
-                            Jan 31, 2023 &#8226; arXiv
-                        </div>-->
-                    
-                        </button>
-                    <div class="content">
-                        <div class="row">
-                            <div style="font-weight: bold;">Abstract: </div>
-                      <p> In this paper, we are interested in weighted one-counter automata whose transitions are assigned a weight from a fixed field. In particular, we consider deterministic weighted real-time one-counter automaton (DWROCA). A DWROCA is a deterministic real-time one-counter automaton whose transitions are assigned a weight. Two DWROCAs are equivalent if every word accepted by one is accepted by the other with the same weight. 
-                        DWROCA is a sub-class of weighted one-counter automata with counter determinacy. It is known that the equivalence problem for this model is in P. This paper gives a simpler proof for checking the equivalence of two DWROCAs.
-                        This gives a better polynomial-time algorithm for checking the equivalence of DWROCAs.</p>
-                    </div>
-                    
-                    
-                    <div class="row"><div class="col-md-2">See publication</div><div class="col-md-3"><a target="_blank">coming soon</a></div></div>
-                    <div class="row"><div class="col-md-2">Full version (arXiv)</div><div class="col-md-3"><a href="https://arxiv.org/abs/2411.03066" target="_blank">click here</a></div></div>
-                    </div>
-                    </div><!--//summary-->
-                <div class="summary">
-                    <button class="collapsible">
-                        <div class="row papertitle">Weighted One-Deterministic-Counter Automata</div>
-                        <div class="row" style="color:grey;">
-                            Dec 12, 2023 &#8226; 43rd IARCS Annual Conference on Foundations of Software Technology and Theoretical Computer Science (FSTTCS 2023)
-                        </div>
-                        <div class="row" style="display: inline;color: gray;">Other Authors: <a href="https://www.labri.fr/perso/vpenelle/" target="_blank">Vincent Penelle</a> &#8226; <a href="https://www.imsc.res.in/prakash_saivasan" target="_blank">Prakash Saivasan</a> &#8226; <a href="https://www.iitgoa.ac.in/~sreejithav/" target="_blank">Sreejith A.V</a></div>
-                    
-                        <!--<div class="row" style="color:grey;">
-                            Jan 31, 2023 &#8226; arXiv
-                        </div>-->
-                    
-                        </button>
-                    <div class="content">
-                        <div class="row">
-                            <div style="font-weight: bold;">Abstract: </div>
-                      <p> We introduce weighted one-deterministic-counter automata (odca). These are weighted one-counter automata (oca) with the property of counter-determinacy, meaning that all paths labelled by a given word starting from the initial configuration have the same counter-effect. Weighted odcas are a strict extension of weighted visibly ocas, which are weighted ocas where the input alphabet determines the actions on the counter. We present a novel problem called the co-VS (complement to a vector space) reachability problem for weighted odcas over fields, which seeks to determine if there exists a run from a given configuration of a weighted odca to another configuration whose weight vector lies outside a given vector space. We establish two significant properties of witnesses for co-VS reachability: they satisfy a pseudo-pumping lemma, and the lexicographically minimal witness has a special form. It follows that the co-VS reachability problem is in 𝖯. These reachability problems help us to show that the equivalence problem of weighted odcas over fields is in 𝖯 by adapting the equivalence proof of deterministic real-time ocas [Stanislav Böhm and Stefan Göller, 2011] by Böhm et al. This is a step towards resolving the open question of the equivalence problem of weighted ocas. Finally, we demonstrate that the regularity problem, the problem of checking whether an input weighted odca over a field is equivalent to some weighted automaton, is in 𝖯. We also consider boolean odcas and show that the equivalence problem for (non-deterministic) boolean odcas is in PSPACE, whereas it is undecidable for (non-deterministic) boolean ocas.</p>
-                    </div>
-                    <div class="row"><div class="col-md-2">See publication</div><div class="col-md-3"><a href="https://doi.org/10.4230/LIPIcs.FSTTCS.2023.39" target="_blank">click here</a></div></div>
-                    <div class="row"><div class="col-md-2">Full version (arXiv)</div><div class="col-md-3"><a href="http://arxiv.org/abs/2301.13456" target="_blank">click here</a></div></div>
-                    </div>
-                    </div><!--//summary-->
-                <div class="summary">
-                    <button class="collapsible">
-                        <div class="row papertitle">CAP: A Cellular Automata Based Fuzzy Classifier</div>
-                        <div class="row" style="color:grey;">
-                            Feb 26, 2022 &#8226; Materials Today Proceedings
-                        </div>
-                        <div class="row" style="display: inline;color: gray">Other Authors: <a href="https://cse.cet.ac.in/amo-team/dr-m-abdul-nizar/" target="_blank">Dr. M Abdul Nizar</a> &#8226;</div>
-                   
-                        </button>
-                    <div class="content">
-                        <div class="row">
-                            <div style="font-weight: bold;">Abstract: </div>
-                      <p>This paper proposes an efficient classifier based on continuous cellular automata with promising running time and classification accuracy. The classifier model is capable of processing data sets containing large number of numeric as well as non-numeric attributes. It performs effective pre-processing of numeric and nominal attributes to identify the most relevant ones. It also prunes out unnecessary computations by limiting stabilisation of the cellular automata during the training phase. The classifier also employs various techniques to reduce the number of incorrect classifications and overfitting of data. A number of experiments were conducted to evaluate the performance of the proposed classifier by changing various parameters during the training phase. Evaluations show that the classifier out-performs existing rule-based classifiers in terms of accuracy.</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2">See publication</div><div class="col-md-3"><a href="https://doi.org/10.1016/j.matpr.2022.02.284" target="_blank">click here</a></div></div>
-                    </div>
-                    
-                                    </div><!--//summary-->
-<div class="summary">
-<button class="collapsible">
-    <div class="row papertitle">Optical Music Recognition Using Image Processing and Machine Learning</div>
-    <div class="row" style="color:grey;">
-        Nov 30, 2018 &#8226; International Journal of Computer Sciences and Eng.
-    </div>
-    <div class="row" style="display: inline;color: gray;">Other Authors: <a href="https://www.adishankara.ac.in/department/faculty/398" target="_blank">Dr. Ramani Bai V</a> &#8226; <a href="https://www.linkedin.com/in/jesmy-sunny-675195144/" target="_blank">Jesmy Sunny</a> &#8226; <a href="https://www.linkedin.com/in/aju-tom-kuriakose-25611b67/" target="_blank">Aju Tom Kuriakose</a> &#8226; <a href="https://www.linkedin.com/in/rahul-vijayakumar-95bb703a/" target="_blank">Rahul Vijayakumar</a></div>
-
-    </button>
-<div class="content">
-    <div class="row">
-        <div style="font-weight: bold;">Abstract: </div>
-  <p>The ability to understand music score is a basic requirement for learning music. This paper proposes a mathematical method to find the pitch of a musical note from digital image of sheet music and a classification-based method for detecting the duration of a music note. In a sheet music, the horizontal direction can be associated with the notes starting time, whilst the vertical direction can be associated with pitch. The symbols used for a note represents its duration. Music scores sometimes need to be transposed or slightly modified, having the score in a digital format greatly reduces the time and effort required to do these. In this paper, we make use of techniques such as Run Length Encoding (RLE), Horizontal projection and Vertical Projection (X & Y projections) for Segmentation and attribute extraction. For note recognition, a classifier based system is used which returns the duration of the given input symbol. The pitch, duration and position of notes are finally given as input to a midi generation module, which generates a MIDI file corresponding to the given input music notation. There are several other applications to Optical Music Recognition (OMR) systems. Converting music scores in Braille code for the blind is yet another application of an OMR system.</p>
-</div>
-<div class="row"><div class="col-md-2">See publication</div><div class="col-md-3"><a href="https://www.ijcseonline.org/full_spl_paper_view.php?paper_id=519" target="_blank">click here</a></div></div>
-</div>
-</div><!--//summary-->
-
-                <button class="collapsible">
-                    <div class="row papertitle">A Survey on Fuzzy Logic & Fuzzy Classifiers Based on Continuous Cellular Automata</div>
-                    <div class="row" style="color:grey;">
-                        Aug 20, 2016 &#8226; National Conference on Technological Trends (NCTT)
-                    </div>
-                    <div class="row" style="display: inline;color: gray;">Other Authors: <a href="https://cse.cet.ac.in/amo-team/dr-m-abdul-nizar/" target="_blank">Dr. M Abdul Nizar</a> &#8226;</div>
-                
-                    </button>
-                <div class="content">
-                    <div class="row">
-                        <div style="font-weight: bold;">Abstract: </div>
-                  <p>Classification is one among the most studied supervised learning techniques. There are a variety of classifiers and classifying algorithms. Fuzzy Classifiers are classifiers which deals with varying degrees of membership, unlike crisp classifiers which have only a true or false value for membership of an instance to a class. Cellular Automata is one of the ways of performing computations which necessitates extremely the processing of data at a high speed. The use of cellular automata in classification is a promising area of study. Using Continuous Cellular Automata helps us to incorporate the concept of fuzziness into the Classifier using Cellular Automata. This survey studies the basic concept of fuzzy logic, cellular automata and the types of neighbourhood & diffusion rules in use, examines the concept of Continuous cellular automata and describes various defuzzification processes in brief. We also study an existing fuzzy classifier using continuous cellular automata and its working.</p>
-                </div>
-                <div class="row"><div class="col-md-2">See publication</div><div class="col-md-3"><a href="https://github.com/prince-iitgoa/Publications/blob/main/NCCT2016.pdf" target="_blank">click here</a></div></div>
-                </div>
-                
-            </section>
-            <section class="section summary-section" id="talk">
-                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-video"></i></span>Recorded Talks</h2>
-                <div class="summary">
-                    <button class="collapsible">
-                        <div class="row papertitle">Learning Real-Time One-Counter Automata Using Polynomially Many Queries</div>
-                        <div class="row" style="color:grey;">
-                            Research Highlights in Programming Languages (RHPL 2024)</div>
-                        <div class="row"> IIT Gandhinagar, India &#8226; 
-                            Dec 18, 2024 
-                        </div>
-                        <!--<div class="row" style="color:grey;">
-                            Jan 31, 2023 &#8226; arXiv
-                        </div>-->
-                    
-                    </button>
-                    <div class="content">
-                        <div class="row">
-                            <div style="font-weight: bold;">Abstract: </div>
-                      <p>In this talk, we introduce a novel method for active learning of deterministic real-time one-counter automata (DROCA). The existing techniques for learning DROCA rely on observing the behaviour of the DROCA up to exponentially large counter-values. Our algorithm eliminates this need and requires only a polynomial number of queries. Additionally, our method differs from existing techniques as we learn a minimal counter-synchronous DROCA, resulting in much smaller counter-examples on equivalence queries. Learning a minimal counter-synchronous automaton cannot be done in polynomial time unless $P = NP$, even in the case of visibly one-counter automata. We use a SAT solver to overcome this difficulty. The solver is used to compute a minimal separating DFA from a given set of positive and negative samples.
-                        We implemented the proposed learning algorithm and tested it on randomly generated DROCAs. Our evaluations show that the proposed method outperforms the existing techniques on the test set.  </p>
-                    </div>
-                    <div class="row"><div class="col-md-2">Watch Talk</div><div class="col-md-3"><a href="https://www.youtube.com/live/mZ-DoJV8M9M?si=_0uTLdy1RQUpB20X\&t=3300" target="_blank">click here</a></div></div>
-                    </div>
-                </div>
-                <div class="summary">
-                    <button class="collapsible">
-                        <div class="row papertitle">Learning One-Counter Automata Using SAT Solver</div>
-                        <div class="row" style="color:grey;">
-                            Highlights of Logic, Games and Automata (Highlights 2024)</div>
-                        <div class="row"> University of Bordeaux, France &#8226; 
-                            Sep 19, 2024 
-                        </div>
-                        <!--<div class="row" style="color:grey;">
-                            Jan 31, 2023 &#8226; arXiv
-                        </div>-->
-                    
-                    </button>
-                    <div class="content">
-                        <div class="row">
-                            <div style="font-weight: bold;">Abstract: </div>
-                      <p>In this presentation, we introduce a novel method for active learning of a minimal-sized visibly one-counter automaton (VOCA) using SAT solver. We follow Angluin's L* algorithm. The algorithm uses only a polynomial number of membership or equivalence queries. All the existing literature, including the algorithm presented by Neider and Löding for learning VOCA, requires exponentially many queries relative to the size of a minimal VOCA recognising the given language. Our approach eliminates the necessity to observe the VOCAs behaviour up to exponentially large counter values. This sets it apart from existing techniques that rely on identifying repetitive patterns in behaviour graphs of exponential size.
-
-                        Michaliszyn and Otop observed that the problem of finding the minimal VOCA is NP-Complete.
-                        If a polynomial time algorithm for learning the minimal VOCA exists, it could be employed to minimise VOCA in polynomial time. Consequently, a learning algorithm for VOCA that achieves minimal representation in polynomial time does not exist.
-                        
-                        In the latter part of the work, we looked at learning Deterministic real-time one-counter automata (DROCA). However, we make use of an additional query, called counter-value query - the student gives the teacher a word, and the teacher returns the counter-value reached on traversing the word in the DROCA.
-                        We show that learning DROCA can done using polynomially many queries within this framework.
-                        This improves the existing result by Bruyère et al. that needed an exponential number of queries, space and time for learning DROCA. </p>
-                    </div>
-                    <div class="row"><div class="col-md-2">Watch Talk</div><div class="col-md-3"><a href="https://plmbox.math.cnrs.fr/d/842a02badc75464b9cdd/files/?p=%2F4-Thursday%2FSession_6_Automata%2F2-Prince_Mathew.mp4" target="_blank">click here</a></div><div class="col-md-2">Slides</div><div class="col-md-3"><a href="https://plmbox.math.cnrs.fr/d/842a02badc75464b9cdd/files/?p=%2F4-Thursday%2FSession_6_Automata%2F2-Prince_Mathew.pdf" target="_blank">click here</a></div></div>
-                    </div>
-                </div>
-                <div class="summary">
-                    <button class="collapsible">
-                        <div class="row papertitle">Weighted One-Deterministic-Counter Automata</div>
-                        <div class="row" style="color:grey;">
-                            Foundations of Software Technology and Theoretical Computer Science 2023 (FSTTCS 2023)
-                        </div>
-                        <div class="row">
-                            IIIT Hyderabad, India &#8226; Dec 19, 2023 
-                        </div>
-                        <!--<div class="row" style="color:grey;">
-                            Jan 31, 2023 &#8226; arXiv
-                        </div>-->
-                    
-                    </button>
-                    <div class="content">
-                        <div class="row">
-                            <div style="font-weight: bold;">Abstract: </div>
-                      <p>We introduce weighted one-deterministic-counter automata (odca). These are weighted one-counter automata (oca) with the property of counter-determinacy, meaning that all paths labelled by a given word starting from the initial configuration have the same counter-effect. Weighted odcas are a strict extension of weighted visibly ocas, which are weighted ocas where the input alphabet determines the actions on the counter. We present a novel problem called the co-VS (complement to a vector space) reachability problem for weighted odcas over fields, which seeks to determine if there exists a run from a given configuration of a weighted odca to another configuration whose weight vector lies outside a given vector space. We establish two significant properties of witnesses for co-VS reachability: they satisfy a pseudo-pumping lemma, and the lexicographically minimal witness has a special form. It follows that the co-VS reachability problem is in 𝖯. These reachability problems help us to show that the equivalence problem of weighted odcas over fields is in 𝖯 by adapting the equivalence proof of deterministic real-time ocas [Stanislav Böhm and Stefan Göller, 2011] by Böhm et al. This is a step towards resolving the open question of the equivalence problem of weighted ocas. Finally, we demonstrate that the regularity problem, the problem of checking whether an input weighted odca over a field is equivalent to some weighted automaton, is in 𝖯. We also consider boolean odcas and show that the equivalence problem for (non-deterministic) boolean odcas is in PSPACE, whereas it is undecidable for (non-deterministic) boolean ocas.
-                        </p>
-                    </div>
-                    <div class="row"><div class="col-md-3">Watch Talk</div><div class="col-md-6"><a href="https://www.youtube.com/live/nWBfj0wzY18?si=X1AjFms3EN-VcHls&t=9895" target="_blank">click here</a></div></div>
-                    </div>
-                </div>
-                <div class="summary">
-                    <button class="collapsible">
-                        <div class="row papertitle">One-Deterministic-Counter Automata</div>
-                        <div class="row" style="color:grey;">
-                            Formal Methods Update Meeting 2023 (FM Update 2023)
-                        </div>
-                        <div class="row">
-                            IIT Goa, India &#8226; June 30, 2023 
-                        </div>
-                        <!--<div class="row" style="color:grey;">
-                            Jan 31, 2023 &#8226; arXiv
-                        </div>-->
-                    
-                    </button>
-                    <div class="content">
-                        <div class="row">
-                            <div style="font-weight: bold;">Abstract: </div>
-                      <p>We introduce One-deterministic-counter automata (ODCA), one-counter automata where all runs labeled by a given word exhibit the same counter effect. The talk will specifically focus on weighted ODCAs. We present a novel problem known as the co-VS (complement to a vector space) reachability problem. By leveraging properties of matrices and vector spaces, a pseudo-pumping lemma is established, proving that the Co-VS reachability problem is in P. Furthermore, we demonstrate that the lexicographically minimal witness for this problem has a special form. Consequently, it follows that the equivalence problem of ODCAs is also in P. This is joint work with Dr. Sreejith A.V., Dr. Vincent Penelle, and Dr. Prakash Saivasan.
-                      </p>
-                    </div>
-                    <div class="row"><div class="col-md-3">Watch Talk</div><div class="col-md-6"><a href="https://www.youtube.com/watch?v=dkBPlRkqrrw" target="_blank">click here</a></div></div>
-                    </div>
-                </div>
-                <div class="summary">
-                    <button class="collapsible">
-                        <div class="row papertitle">One-Deterministic-Counter Automata</div>
-                        <div class="row" style="color:grey;">
-                            Highlights of Logic, Games and Automata (Highlights 2023)</div>
-                        <div class="row"> University of Kassel, Germany &#8226; 
-                            Jul 26, 2023 
-                        </div>
-                        <!--<div class="row" style="color:grey;">
-                            Jan 31, 2023 &#8226; arXiv
-                        </div>-->
-                    
-                    </button>
-                    <div class="content">
-                        <div class="row">
-                            <div style="font-weight: bold;">Abstract: </div>
-                      <p>We introduce one deterministic-counter automata (ODCA), which are one-counter automata where all runs labelled by a given word have the same counter effect, a property we call counter-determinacy. ODCAs are an extension of visibly one-counter automata - one-counter automata (OCA), where the input alphabet determines the actions on the counter. They are a natural way to introduce non-determinism/weights to OCAs while maintaining the decidability of crucial problems that are undecidable on general OCAs. For example, the equivalence problem is decidable for deterministic OCAs, whereas it is undecidable for non-deterministic OCAs. We consider both non-deterministic and weighted ODCAs. Our work shows that the equivalence problem is decidable in polynomial time for weighted ODCAs over a field and polynomial space for non-deterministic ODCAs. As a corollary, we get that the regularity problem, i.e., the problem of checking whether an input weighted ODCA is equivalent to some weighted automaton, is also in polynomial time. Furthermore, we show that the covering and coverable equivalence problems for uninitialised weighted ODCAs are decidable in polynomial time. We also introduce a few reachability problems that are of independent interest and show that they are in P. These reachability problems later help in solving the equivalence problem.
-                      </p>
-                    </div>
-                    <div class="row"><div class="col-md-3">Watch Talk</div><div class="col-md-6"><a href="https://uni-kassel.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=097fe15b-74dd-47c1-bf23-b04b00c98cf6&start=1128.1917782978653" target="_blank">click here</a></div></div>
-                    </div>
-                </div>
-            </section>
+            
             <section class="section projects-section" id="project">
                 <h2 class="section-title"><span class="icon-holder"><i class="fas fa-users"></i></span>Projects</h2>
                 <div class="summary">
@@ -504,6 +530,9 @@
                         <div class="row">
                       <p>Active learning algorithm for Deterministic Real-time One-Counter Automata (DROCA) using polynomially many queries using a SAT solver. This work was done as a part of my PhD.
                       </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5" > Code: <a href="https://doi.org/10.5281/zenodo.14604419" target="_blank">click here</a></div>
                     </div>
                  </div>
                     
