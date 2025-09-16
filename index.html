@@ -127,9 +127,39 @@
                         <div style="font-weight: bold; display: inline;">Research Interests:</div> Automata Theory
                         &#8226; Formal Methods in Computer Science &#8226; Machine Learning &#8226;</p>
                         <div class="row">
-                            <div class="col-md-4"><a
+                            <div class="col-md-3"><a
                                     href="./assets/Resume/resume.pdf"
                                     target="_blank">Download CV</a> (updated July 2025)</div>
+                                <div class="col-md-7" style="padding-left: 33%;">Click to learn more about my PhD Thesis  <span style="font-size: 2rem;">👉</span></div>
+                                <div class="col-md-2"> <button class="open-btn">Thesis Abstract</button>
+
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup">
+      <span class="close-btn" id="closeBtn">&times;</span>
+      <div class="popup-content">
+        <h3 style="text-align: center;">Learning and Equivalence of One-Counter Systems</h2>
+        <h4 style="text-align: center;">Prince Mathew</h3>
+        <h5 style="text-align: center;">Abstract</h4>
+        <p style="font-family:times;text-align: justify; text-justify: inter-word;" > This thesis contributes to the study of active learning and equivalence of one-counter systems.
+The first part of this thesis focuses on developing a new approach for active learning of deterministic real-time one-counter automata (DROCA). Traditional approaches to learning DROCA often involve learning an initial portion of an infinite behavioural
+graph. The aim is to identify a repetitive structure in the graph that defines the overall behaviour of the DROCA. However, this repetitive structure often requires constructing an exponentially large graph, leading to an exponential runtime and number of queries. In contrast, our SAT-based method reduces the number of queries to a polynomial number, significantly improving the efficiency of learning algorithms for DROCA. Furthermore, it learns a minimal counter-synchronous DROCA recognising the
+language making it more feasible for practical applications. We also introduce improved equivalence checking algorithms for counter-synchronised one-counter automata that is used in our learning algorithm. This helps to obtain much smaller counter-examples on equivalence queries. Additionally, we present an even faster equivalence check for the special case of visibly one-counter automata. </p>
+
+<p style="font-family:times;text-align: justify; text-justify: inter-word;" > The second part of the thesis introduces real-time one-deterministic-counter automata (RODCA). These are real-time one-counter automata with the property of counter-determinacy, meaning that all paths labelled by a given word starting from the initial configuration have the same counter-effect. We prove that the equivalence of WRODCA over fields is in P.
+ This is a step towards resolving the open question of the equivalence problem of weighted one-counter automata. 
+We also considered boolean RODCA and showed that the equivalence problem for (nondeterministic) boolean RODCA is in PSPACE. In contrast, it is undecidable for (nondeterministic) boolean one-counter automata. 
+Additionally, a faster equivalence-checking method is proposed for the special case of deterministic weighted real-time one-counter automata. The thesis also explores the regularity and covering problems for WRODCA, and shows that they are in P.</p>
+
+<b>Keywords: </b>  One-counter automata, Equivalence, Active Learning, Weighted automata, Reachability, SAT solver, Regularity, Covering.
+       <!-- <div class="row">
+            <div class="col-md-8"></div>    
+                            <div class="col-md-4"><a
+                                    href="./assets/SynopsisPrinceMathew.pdf"
+                                    target="_blank">Download Synopsis</a></div> </div>-->
+       </div>
+      <button class="download-btn" id="downloadBtn">Download Thesis</button>
+    </div>
+  </div></div>
                         </div>
                         
                     </div><!--//summary-->
@@ -154,8 +184,11 @@
                             <div class="news-marquee">
                             <div class="news-item"></div>
                             <div class="news-item"></div>
+                            <div class="news-item">📢 Our paper titled "Scalable Learning of One-Counter Automata via State-Merging Algorithms" got accepted for publication at FSTTCS 2025 (September 2025)</div>
+                            <div class="news-item">🧾 Our abstract titled "Learning Deterministic One-Counter Automata" got accepted for presentation at RP 2025 (August 2025)</div>
                             <div class="news-item">🎙️ Presented our work on learning one-counter automata in polynomial time at IIT Bombay (July 2025)</div>
                             <div class="news-item">🏛️  Research stay at TIFR Mumbai (July 2025)</div>
+                            <div class="news-item">🧾 Our work titled "Learning Deterministic One-Counter Automata in Polynomial time" got accepted for presentation at Highlights 2025 (June 2025)</div>
                             <div class="news-item">🎙️ Presented our work on learning one-counter automata in polynomial time at LICS 2025, Singapore (June 2025)</div>
                             <div class="news-item">🏆 Received grant from Google for our work on learning one-counter automata (May 2025)</div>
                             <div class="news-item">✈️ Received ACM/IARCS travel grant for attending LICS 2025 (May 2025)</div>
@@ -163,6 +196,7 @@
                             <div class="news-item">📢 Our paper titled "Learning Real-Time One-Counter Automata Using Polynomially Many Queries" got published (May 2025)</div>
                             <div class="news-item">🎖️ Selected for scholarship for the Logic Mentoring Workshop at LICS 2025 (April 2025)</div>
                             <div class="news-item">🎉 Successfully defended my Ph.D. dissertation titled "Learning and Equivalence of One-Counter Systems" (April 2025)</div>
+                            <div class="news-item">📢 Our paper titled "Equivalence of Deterministic Weighted Real-Time One-Counter Automata" got published (April 2025)</div>
                             <div class="news-item">🌍 Awarded ACM/IARCS travel grant for attending TACAS 2025 (April 2025)</div>
                             <div class="news-item">🎙️ Presented our work on learning one-counter automata using polynomially many queries, TIFR Mumbai (April 2025)</div>
                             <div class="news-item">🏛️  Research stay at TIFR Mumbai (March 2025)</div>
@@ -174,15 +208,17 @@
                             <div class="news-item">🌐 Received grants from RWTH Aachen University and University of Antwerp for research visits (September 2024)</div>-->
                             <div class="news-item"></div>
                             <div class="news-item"></div>
+                            <div class="news-item">📢 Our paper titled "Scalable Learning of One-Counter Automata via State-Merging Algorithms" got accepted for publication at FSTTCS 2025 (September 2025)</div>
+                            <div class="news-item">🧾 Our abstract titled "Learning Deterministic One-Counter Automata" got accepted for presentation at RP 2025 (August 2025)</div>
                             <div class="news-item">🎙️ Presented our work on learning one-counter automata in polynomial time at IIT Bombay (July 2025)</div>
                             <div class="news-item">🏛️  Research stay at TIFR Mumbai (July 2025)</div>
-                            <div class="news-item">🎙️ Presented our work on learning one-counter automata in polynomial time at LICS 2025, Singapore (June 2025)</div>
-                            <div class="news-item">🏆 Received grant from Google for our work on learning one-counter automata (May 2025)</div>
+                            <div class="news-item">🧾 Our work titled "Learning Deterministic One-Counter Automata in Polynomial time" got accepted for presentation at Highlights 2025 (June 2025)</div>
                             <div class="news-item">✈️ Received ACM/IARCS travel grant for attending LICS 2025 (May 2025)</div>
                             <div class="news-item">🎙️ Presented our work on learning one-counter automata at TACAS 2025, Canada (May 2025)</div>
                             <div class="news-item">📢 Our paper titled "Learning Real-Time One-Counter Automata Using Polynomially Many Queries" got published (May 2025)</div>
                             <div class="news-item">🎖️ Selected for scholarship for the Logic Mentoring Workshop at LICS 2025 (April 2025)</div>
                             <div class="news-item">🎉 Successfully defended my Ph.D. dissertation: “Learning and Equivalence of One-Counter Systems” (April 2025)</div>
+                            <div class="news-item">📢 Our paper titled "Equivalence of Deterministic Weighted Real-Time One-Counter Automata" got published (April 2025)</div>
                             <div class="news-item">🌍 Awarded ACM/IARCS travel grant for attending TACAS 2025 (April 2025)</div>
                             <div class="news-item">🎙️ Presented our work on learning one-counter automata using polynomially many queries, TIFR Mumbai (April 2025)</div>
                             <div class="news-item">🏛️  Research stay at TIFR Mumbai (March 2025)</div>
@@ -199,6 +235,39 @@
                 <section class="section summary-section" id="publication">
                     <h2 class="section-title"><span class="icon-holder"><i class="fa fa-book"></i></span>Publications
                     </h2>
+                    <div class="summary">
+                        <button class="collapsible">
+                            <div class="row papertitle">Scalable Learning of One-Counter Automata via State-Merging Algorithms
+                            </div>
+                            <div class="row" style="color:grey;">
+                                Sep 8, 2025 &#8226; 45th IARCS Annual Conference on Foundations of Software Technology and Theoretical Computer Science (FSTTCS 2025) - To appear
+                            </div>
+                            <div class="row" style="display: inline;color: gray;">Other Authors: <a
+                                    href="https://www.tifr.res.in/shibashis.guha/" target="_blank">Shibashis Guha</a>
+                                &#8226; <a
+                                    href="https://anirban11.github.io/" target="_blank">Anirban Majumdar</a>
+                                &#8226; <a href="https://www.iitgoa.ac.in/~sreejithav/" target="_blank">Sreejith A.V</a>
+                            </div>
+
+                            <!--<div class="row" style="color:grey;">
+                                Jan 31, 2023 &#8226; arXiv
+                            </div>-->
+
+                        </button>
+                        <div class="content">
+                            <div class="row">
+                                <div style="font-weight: bold;">Abstract: </div>
+                                <p> We propose One-counter Positive Negative Inference (OPNI), a passive learning algorithm for deterministic real-time one-counter automata (DROCA). Inspired by the RPNI algorithm for regular languages, OPNI constructs a DROCA consistent with any given valid sample set.
+
+We further present a method for combining OPNI with active learning of DROCA, and provide an implementation of the approach. Our experimental results demonstrate that this approach scales more effectively than existing state-of-the-art algorithms. We also evaluate the performance of the proposed approach for learning visibly one-counter automata.  </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2">Full version (arXiv)</div>
+                                <div class="col-md-3"><a href="http://arxiv.org/abs/" target="_blank">click
+                                        here</a></div>
+                            </div>
+                        </div>
+                    </div><!--//summary-->
                     <div class="summary">
                         <button class="collapsible">
                             <div class="row papertitle">Learning Deterministic One-Counter Automata in Polynomial Time
@@ -405,7 +474,7 @@
                             <div class="row papertitle">CAP: A Cellular Automata Based Fuzzy Classifier</div>
                             <div class="row" style="color:grey;">
                                 Feb 26, 2022 &#8226; International Conference on Artificial Intelligence & Energy
-                                Systems
+                                Systems (AIES 2022)
                             </div>
                             <div class="row" style="display: inline;color: gray">Other Authors: <a
                                     href="https://cse.cet.ac.in/amo-team/dr-m-abdul-nizar/" target="_blank">Dr. M Abdul
@@ -440,7 +509,7 @@
                             <div class="row papertitle">Optical Music Recognition Using Image Processing and Machine
                                 Learning</div>
                             <div class="row" style="color:grey;">
-                                Nov 30, 2018 &#8226; International Journal of Computer Sciences and Eng.
+                                Nov 30, 2018 &#8226; International Journal of Computer Sciences and Engineering (IJCSE)
                             </div>
                             <div class="row" style="display: inline;color: gray;">Other Authors: <a
                                     href="https://www.adishankara.ac.in/department/faculty/398" target="_blank">Dr.
@@ -485,7 +554,7 @@
                         <div class="row papertitle">A Survey on Fuzzy Logic & Fuzzy Classifiers Based on Continuous
                             Cellular Automata</div>
                         <div class="row" style="color:grey;">
-                            Aug 20, 2016 &#8226; National Conference on Technological Trends (NCTT)
+                            Aug 20, 2016 &#8226; National Conference on Technological Trends (NCTT 2016)
                         </div>
                         <div class="row" style="display: inline;color: gray;">Other Authors: <a
                                 href="https://cse.cet.ac.in/amo-team/dr-m-abdul-nizar/" target="_blank">Dr. M Abdul
@@ -805,6 +874,8 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="time">Feb 2018 - Dec 2018</div>
+                                    <div class="time">Jan 2024 - July 2024</div>
+                                    <div class="time">Jan 2025 - Present</div>
                                 </div>
                             </div>
                         </div><!--//meta-->
@@ -1219,6 +1290,45 @@
             $('#tail_parent').toggleClass('hidden');
         }
 
+         const openBtn = document.getElementsByClassName("open-btn")[0];
+    const closeBtn = document.getElementById("closeBtn");
+    const popupOverlay = document.getElementById("popupOverlay");
+    const downloadBtn = document.getElementById("downloadBtn");
+
+    // Open popup
+    openBtn.addEventListener("click", () => {
+      popupOverlay.classList.remove("hide");
+      popupOverlay.style.display = "flex";
+      setTimeout(() => {
+        popupOverlay.classList.add("show");
+      }, 10);
+    });
+
+    // Close popup
+    function closePopup() {
+      popupOverlay.classList.remove("show");
+      popupOverlay.classList.add("hide");
+      setTimeout(() => {
+        popupOverlay.style.display = "none";
+      }, 300);
+    }
+
+    closeBtn.addEventListener("click", closePopup);
+
+    window.addEventListener("click", (e) => {
+      if (e.target === popupOverlay) {
+        closePopup();
+      }
+    });
+
+    // Download functionality
+  downloadBtn.addEventListener("click", () => {
+    const link = document.createElement("a");
+    link.target = "_blank";
+    link.href = "./assets/ThesisPrinceMathew.pdf";   // 👈 relative path to your file
+    link.download = "ThesisPrinceMathew.pdf";       // 👈 filename when saved
+    link.click();
+  });
     </script>
 </body>
 

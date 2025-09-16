@@ -336,6 +336,104 @@
                   }
                  
             }
+ .open-btn {
+      padding: 10px 20px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin: 20px;
+    }
+
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .popup-overlay.show {
+      display: flex;
+      opacity: 1;
+    }
+    .popup-overlay.hide {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .popup {
+      position: relative;
+      background: white;
+      width: 300%;
+      max-width: 800px;
+      max-height: 80%;
+      padding: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transform: scale(0.8);
+      transition: transform 0.3s ease;
+    }
+    .popup-overlay.show .popup {
+      transform: scale(1);
+    }
+    .popup-overlay.hide .popup {
+      transform: scale(0.8);
+    }
+
+    .popup-content {
+      overflow-y: auto;
+      flex: 1;
+      margin-bottom: 15px;
+      padding: 10px;
+    }
+
+    /* Smooth, modern scrollbar styling */
+    .popup-content::-webkit-scrollbar {
+      width: 8px;
+    }
+    .popup-content::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    .popup-content::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+    }
+    .popup-content::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #888;
+    }
+    .close-btn:hover {
+      color: #000;
+    }
+
+    .download-btn {
+      padding: 10px 20px;
+      background: #28A745;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
             
         
           
