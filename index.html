@@ -130,13 +130,31 @@
                             <div class="col-3"><a
                                     href="./assets/Resume/resume.pdf"
                                     target="_blank">Download CV</a> (updated October 2025)</div>
-                                <div class="col-5" style="padding-left: 23%;transform: translateY(10px);">PhD Thesis  <span style="font-size: 2rem;">👉</span></div>
-                                <div class="col-2"> <button class="open-btn">Thesis Abstract</button>
-
-                                    <div class="popup-overlay" id="popupOverlay">
-                                        <div class="popup">
-                                        <span class="close-btn" id="closeBtn">&times;</span>
-                                        <div class="popup-content">
+                        </div>
+                        <div class="summary">
+                        <button class="collapsible">
+                            <div class="row papertitle" 
+                                style="background-color:  rgb(57, 119, 184); 
+                                        cursor: pointer; 
+                                        padding: 15px 20px; 
+                                        border-radius: 8px; 
+                                        box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+                                        transition: background-color 0.3s ease; 
+                                        display: flex; 
+                                        align-items: center; 
+                                        justify-content: space-between;">
+                                
+                                <div class="col-md-6" style="color: white; font-weight: bold;">
+                                    PhD Thesis
+                                </div>
+                                <div class="col-md-6" style="color: white; text-align: end;">
+                                    Click to view abstract and link to thesis
+                                </div>
+                            </div>
+                        </button>
+                        <div class="content">
+                            <div class="row">
+                                <div>
                                             <h3 style="text-align: center;">Learning and Equivalence of One-Counter Systems</h2>
                                             <h4 style="text-align: center;">Prince Mathew</h3>
                                             <h5 style="text-align: center;">Abstract</h4>
@@ -156,12 +174,19 @@
                                                                 <div class="col-md-4"><a
                                                                         href="./assets/SynopsisPrinceMathew.pdf"
                                                                         target="_blank">Download Synopsis</a></div> </div>-->
-                                        </div>
-                                        <button class="download-btn" id="downloadBtn">Download Thesis</button>
-                                        </div>
-                                    </div>
                                 </div>
+                                        
+                                        
+                              
+                                
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3"><a href="./assets/ThesisPrinceMathew.pdf" target="_blank">Download Thesis</a></div>
+                            </div>
                         </div>
+                    </div><!--//summary-->
+
+                        
                         
                     </div><!--//summary-->
                 </section><!--//section-->
@@ -1350,45 +1375,7 @@ We further present a method for combining OPNI with active learning of DROCA, an
             $('#tail_parent').toggleClass('hidden');
         }
 
-         const openBtn = document.getElementsByClassName("open-btn")[0];
-    const closeBtn = document.getElementById("closeBtn");
-    const popupOverlay = document.getElementById("popupOverlay");
-    const downloadBtn = document.getElementById("downloadBtn");
 
-    // Open popup
-    openBtn.addEventListener("click", () => {
-      popupOverlay.classList.remove("hide");
-      popupOverlay.style.display = "flex";
-      setTimeout(() => {
-        popupOverlay.classList.add("show");
-      }, 10);
-    });
-
-    // Close popup
-    function closePopup() {
-      popupOverlay.classList.remove("show");
-      popupOverlay.classList.add("hide");
-      setTimeout(() => {
-        popupOverlay.style.display = "none";
-      }, 300);
-    }
-
-    closeBtn.addEventListener("click", closePopup);
-
-    window.addEventListener("click", (e) => {
-      if (e.target === popupOverlay) {
-        closePopup();
-      }
-    });
-
-    // Download functionality
-  downloadBtn.addEventListener("click", () => {
-    const link = document.createElement("a");
-    link.target = "_blank";
-    link.href = "./assets/ThesisPrinceMathew.pdf";   // 👈 relative path to your file
-    link.download = "ThesisPrinceMathew.pdf";       // 👈 filename when saved
-    link.click();
-  });
     </script>
 </body>
 
