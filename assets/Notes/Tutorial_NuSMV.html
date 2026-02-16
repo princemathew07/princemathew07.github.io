@@ -327,6 +327,7 @@ pre:not(.hljs) {
 }
 
 blockquote {
+  width: 800px;
 	background: rgba(127, 127, 127, 0.1);
 	border-color: rgba(0, 122, 204, 0.5);
 }
@@ -408,11 +409,11 @@ ASSIGN
 
 <h2 id="3-running-nusmv-commands">3. Running NuSMV Commands</h2>
 <p>Assuming the above code is saved in a file named <code>intro_demo.smv</code>, follow these steps in the terminal:</p>
-<pre class="hljs"><code><div>NuSMV -int
+<pre class="hljs" style="width: 600px;"><code><div>NuSMV -int
 </div></code></pre>
 <p>This starts NuSMV in interactive mode.
 Within NuSMV, enter:</p>
-<pre class="hljs"><code><div>read_model -i intro_demo.smv
+<pre class="hljs" style="width: 600px;"><code><div>read_model -i intro_demo.smv
 flatten_hierarchy
 encode_variables
 build_model
@@ -461,7 +462,7 @@ When moving from <code>l2</code> to <code>l1</code>, <code>x</code> increments b
 
   <!-- Code -->
   <div style="width: 650px; overflow-x: auto;"> <!-- wide code block -->
-<pre class="hljs"><code>MODULE main
+<pre class="hljs" style="width: 600px;"><code>MODULE main
 VAR
   location : {l1, l2};
   x : 0..100;
@@ -490,13 +491,13 @@ ASSIGN
 <h2 id="6-running-and-simulating-the-extended-model">6. Running and Simulating the Extended Model</h2>
 <p>To exit the current session use the command <code>quit</code></p>
 <p>Load and build the model as before:</p>
-<pre class="hljs"><code><div>read_model -i pg_demo.smv
+<pre class="hljs" style="width: 600px;"><code><div>read_model -i pg_demo.smv
 flatten_hierarchy
 encode_variables
 build_model
 </div></code></pre>
 <p>or</p>
-<pre class="hljs"><code><div>NuSMV -int pg_demo.smv
+<pre class="hljs" style="width: 600px;"><code><div>NuSMV -int pg_demo.smv
 go
 </div></code></pre>
 <p>Check the initial state:</p>
@@ -552,7 +553,7 @@ ASSIGN
 
 <h2 id="8-exploring-and-simulating">8. Exploring and Simulating</h2>
 <p>Loading and build:</p>
-<pre class="hljs"><code><div>NuSMV -int request_busy_demo.smv
+<pre class="hljs" style="width: 600px;"><code><div>NuSMV -int request_busy_demo.smv
 go
 </div></code></pre>
 <ul>
@@ -599,7 +600,7 @@ You can observe transitions between various request and status values. You also 
 <blockquote>
 <p><strong>Example 1:</strong> Check if <code>x &gt;= 0</code> always holds in <em>pg_demo.smv</em></p>
 </blockquote>
-<pre class="hljs"><code><div>NuSMV -int pg_demo.smv
+<pre class="hljs" style="width: 600px;"><code><div>NuSMV -int pg_demo.smv
 go
 check_ltlspec -p &quot;G (x &gt;= 0)&quot;
 </div></code></pre>
@@ -607,7 +608,7 @@ check_ltlspec -p &quot;G (x &gt;= 0)&quot;
 <blockquote>
 <p><strong>Example 2:</strong> Check if <code>request = FALSE</code> always holds in <em>request_busy_demo.smv</em></p>
 </blockquote>
-<pre class="hljs"><code><div>NuSMV -int request_busy_demo.smv
+<pre class="hljs" style="width: 600px;"><code><div>NuSMV -int request_busy_demo.smv
 go
 check_ltlspec -p &quot;G (request = FALSE)&quot;
 </div></code></pre>
@@ -618,7 +619,7 @@ check_ltlspec -p &quot;G (request = FALSE)&quot;
 <blockquote>
 <p><strong>Example 3:</strong> Check if eventually <code>x &gt;= 5</code> holds in <em>pg_demo.smv</em> (see Example Execution 1).</p>
 </blockquote>
-<pre class="hljs"><code><div>NuSMV -int pg_demo.smv
+<pre class="hljs" style="width: 600px;"><code><div>NuSMV -int pg_demo.smv
 go
 check_ltlspec -p &quot;F (x &gt;= 5)&quot;
 </div></code></pre>
@@ -627,7 +628,7 @@ check_ltlspec -p &quot;F (x &gt;= 5)&quot;
 <blockquote>
 <p><strong>Example 4:</strong> Check if whenever <code>request</code> is <code>true</code>, <code>status</code> eventually becomes <code>busy</code> in <em>request_busy_demo.smv</em></p>
 </blockquote>
-<pre class="hljs"><code><div>NuSMV -int request_busy_demo.smv
+<pre class="hljs" style="width: 600px;"><code><div>NuSMV -int request_busy_demo.smv
 go
 check_ltlspec -p &quot;G (request = TRUE -&gt; F (status = busy))&quot;
 </div></code></pre>
@@ -778,7 +779,7 @@ Transitions are unconstrained; any state can transition to any other.</p>
 
   <!-- Code -->
   <div style="width: 600px; overflow-x: auto;"> <!-- increased width -->
-<pre class="hljs"><code>MODULE main
+<pre class="hljs" style="width: 500px;"><code>MODULE main
 VAR
   in1 : boolean;
   in2 : boolean;
@@ -861,7 +862,7 @@ Output computed as <code>XOR</code> of <code>q1.out</code> and <code>q2.out</cod
 
   <!-- Code -->
   <div style="width: 650px; overflow-x: auto;"> <!-- increased width -->
-<pre class="hljs"><code>MODULE main
+<pre class="hljs" style="width: 600px;"><code>MODULE main
 VAR
   x1 : boolean; x2 : boolean;
   y1 : boolean; y2 : boolean;
@@ -899,7 +900,7 @@ ASSIGN
 
   <!-- Code -->
   <div style="width: 650px; overflow-x: auto;"> <!-- increased width -->
-<pre class="hljs"><code>MODULE main
+<pre class="hljs" style="width: 600px;"><code>MODULE main
 VAR
   x : boolean;
   y : boolean;
@@ -956,7 +957,7 @@ Feedback loop between two NAND gates.</p>
 <li>Feedback between <code>q1</code> and <code>q2</code> creates complex state transitions.</li>
 <li>Simulations show how output variables update synchronously.</li>
 </ul>
-<pre class="hljs"><code><div>NuSMV -int nand-demo5.smv
+<pre class="hljs" style="width: 600px;"><code><div>NuSMV -int nand-demo5.smv
 go
 print_reachable_states -v
 pick_state -i
@@ -1031,7 +1032,7 @@ Feedback loops and synchronous composition are naturally expressed with modules.
 
   <!-- Code -->
   <div style="width: 650px; overflow-x: auto;"> <!-- wider code block -->
-<pre class="hljs"><code>MODULE light(other)
+<pre class="hljs" style="width: 600px;"><code>MODULE light(other)
 VAR
   state : {r, y, g};
 
@@ -1072,7 +1073,7 @@ VAR
 
   <!-- Code -->
   <div style="width: 450px; overflow-x: auto;"> <!-- wide code block -->
-<pre class="hljs"><code>MODULE main
+<pre class="hljs" style="width: 400px;"><code>MODULE main
 VAR
   tl1 : process light(tl2.state);
   tl2 : process light(tl1.state);
@@ -1083,7 +1084,7 @@ VAR
 
 
 
-<pre class="hljs"><code><div>NuSMV -int light_asyn_demo.smv
+<pre class="hljs" style="width: 600px;"><code><div>NuSMV -int light_asyn_demo.smv
 go
 check_ltlspec -p &quot;!( F (tl1.state=g &amp; tl2.state = g))
 
@@ -1098,7 +1099,7 @@ check_ltlspec -p &quot;!( F (tl1.state=g &amp; tl2.state = g))
 <ul>
 <li>NuSMV confirms the property holds in asynchronous composition.</li>
 </ul>
-<pre class="hljs"><code><div>print_reachable_states -v
+<pre class="hljs" style="width: 600px;"><code><div>print_reachable_states -v
 pick_state -i
 simulate -i -k 3
 </div></code></pre>
@@ -1112,7 +1113,7 @@ simulate -i -k 3
 
   <!-- Code -->
   <div style="width: 650px; overflow-x: auto;"> <!-- increased width -->
-<pre class="hljs"><code>MODULE thread(y)
+<pre class="hljs" style="width: 600px;"><code>MODULE thread(y)
 VAR
   location : {nc, w, c, e};
 
@@ -1163,7 +1164,7 @@ ASSIGN
 <li>Mutual exclusion means both cannot be in critical section simultaneously.</li>
 </ul>
 
-<pre class="hljs"><code><div>NuSMV -int mutex_demo1.smv
+<pre class="hljs" style="width: 600px;"><code><div>NuSMV -int mutex_demo1.smv
 go
 check_ltlspec -p &quot;!F(p1.location=c &amp; p2.location=c)&quot;
 </div></code></pre>
@@ -1172,7 +1173,7 @@ check_ltlspec -p &quot;!F(p1.location=c &amp; p2.location=c)&quot;
 <li>Property checked: Never both in critical section simultaneously.</li>
 <li>NuSMV confirms the property holds.</li>
 </ul>
-<pre class="hljs"><code><div>pick_state -i
+<pre class="hljs" style="width: 600px;"><code><div>pick_state -i
 simulate -i -k 3
 </div></code></pre>
 <h2 id="4-concurrent-programs-with-shared-variable">4. Concurrent Programs with Shared Variable</h2>
@@ -1180,7 +1181,7 @@ simulate -i -k 3
 <ul>
 <li>Three parallel programs manipulating integer <code>x</code>  (bounded between -1000 and 1000).</li>
 </ul>
-<pre class="hljs" style="width: 400px;"><code><div>MODULE program1(x)
+<pre class="hljs" style="width: 600px;"><code><div>MODULE program1(x)
 VAR
   location : {l1, l2};
 ASSIGN
@@ -1237,7 +1238,7 @@ VAR
 ASSIGN
   init(x) := 0;
 </div></code></pre>
-<pre class="hljs"><code><div>NuSMV -int three_program_demo.smv
+<pre class="hljs" style="width: 600px;"><code><div>NuSMV -int three_program_demo.smv
 go 
 check_ltlspec -p &quot;G (x&gt;=0)&quot; 
 </div></code></pre>
