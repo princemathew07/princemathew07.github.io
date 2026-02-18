@@ -985,6 +985,32 @@ Each step updates all bits simultaneously.
 The counter counts from 000 to 111 and wraps around.
 Demonstrates synchronous composition: all modules update in lockstep.</li>
 </ul>
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+
+  <img src="./img/12.png" alt="alt text" height="430">
+
+  <pre class="hljs" style="margin: 0;">
+<code>
+MODULE counter_cell(carryin)
+VAR
+  value : boolean;
+
+DEFINE
+  carryout := carryin & value;
+
+ASSIGN
+  init(value) := FALSE;
+  next(value) := value XOR carryin;
+
+MODULE main
+VAR
+  bit0 : counter_cell(TRUE);
+  bit1 : counter_cell(bit0.carryout);
+  bit2 : counter_cell(bit1.carryout);
+</code>
+  </pre>
+
+</div>
 <h2 id="5-summary">5. Summary</h2>
 <ul>
 <li>NuSMV models hardware circuits as transition systems with boolean variables.</li>
