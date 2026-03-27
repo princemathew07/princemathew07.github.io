@@ -163,6 +163,10 @@
                 border-radius: 50%;
                 box-shadow: 0 0 .5rem .15rem rgba(0,0,0,.4);
             }
+            .summarycs {
+            display: none;
+            }
+            
             .collapsible {
             background-color: white;
             color: black;
@@ -193,7 +197,7 @@
             animation: slide1 1s ease-in-out infinite;
             }
             
-            .active, .collapsible:hover {
+            .active, .collapsible:hover{
             background-color: aliceblue;
             }
             .row{
