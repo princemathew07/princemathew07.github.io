@@ -1,0 +1,629 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{setspace}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{qrcode}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\Link}[2]{\Highlight{\href{#1}{#2}}}
+
+\newcommand{\Highlight}[1]{\textcolor{blue}{\textbf{#1}}}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=2.4cm, top=2cm, right=1.2cm, bottom=3cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+\newcommand{\resumePoint}[2]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        {\hspace{1mm}#1} & \textit{\footnotesize{#2}} \\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+\newcommand{\resumePointt}[2]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{p{0.9\textwidth}@{\extracolsep{\fill}}r}
+        \hspace{1mm}#1 & \textit{\footnotesize{#2}} \\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+\newcommand{\talkPoint}[2]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{@{}p{0.8\textwidth}@{\extracolsep{\fill}}r@{}}
+        {\hspace{1mm}#1} & \textit{\footnotesize{#2}} \\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{\hspace{1mm}#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+\newcommand{\JRF}[6]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{\hspace{1mm}#1} &  \footnotesize{#4}\\
+        \textit{\footnotesize{#3}} &  \footnotesize{\textit{#5}}\\
+         \textit{} &  \footnotesize{\textit{#6}}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+\newcommand{\resumePublication}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{@{}p{0.7\textwidth}@{\extracolsep{\fill}}r@{}}
+        \textbf{\hspace{1mm}#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} & \footnotesize{#2} \\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+\newcommand{\resumeSubSubheading}[4]{
+\begin{itemize}
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.935\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \end{itemize}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{\hspace{1mm}#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+\newcolumntype{B}{>{\raggedright\arraybackslash\hsize=.6\hsize}X}% {>{\hsize=.5\hsize}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Prince Mathew} % Your Name
+\newcommand{\course}{Postdoctoral Researcher} % Your Program
+\newcommand{\roll}{} % Your Roll No.
+\newcommand{\phone}{+32 472 49 71 20} % Your Phone Number
+\newcommand{\emaila}{prince.mathew@ulb.be} %Email 1
+%\newcommand{\emailb}{officialemail@nitw.ac.in} %Email 2
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{2.35cm}{%
+\vspace{.3cm}
+\includegraphics[width=2cm,clip]{../images/ULB.png}
+}
+\parbox{\dimexpr\linewidth-5.15cm\relax}{
+\begin{tabularx}{\linewidth}{L B} \\
+  \textbf{\Large \name} & \href{tel:+32 472 49 71 20} {\raisebox{0.0\height}{\footnotesize \faPhone}\ \phone}\\
+  {\course} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+ Computer Science Department &  \href{https://orcid.org/0000-0001-6410-1474}{\raisebox{0.0\height}{\footnotesize \faOrcid}\ {0000-0001-6410-1474}}\\ 
+  {Université Libre de Bruxelles}  &  \href{https://princemathew07.github.io/}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {princemathew07}} \\
+ % & \href{https://www.yourLinkedinProfile.com/in/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
+\end{tabularx}
+}
+\parbox{2.35cm}{%
+\vspace{.5cm}
+ \qrcode[height=2.5cm]{https://princemathew07.github.io/}
+}
+% \parbox{3.0cm}{%
+% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+% }
+%\vspace{5mm}
+\section{{\footnotesize \faGraduationCap}\textbf{ Career Profile}}
+\vspace{.1cm}
+I am a postdoctoral researcher in the Formal Methods and Verification group at the Université Libre de Bruxelles. My current work focuses on strategy synthesis for partially observable Markov decision processes. 
+Before joining ULB, I was a research fellow in the School of Mathematics and Computer Science at the Indian Institute of Technology Goa. My research interests lie at the intersection of automata theory and formal verification. During my PhD, I have focused on the equivalence and learning of one-counter systems. 
+
+%
+
+\vspace{.3cm}
+\section{{\footnotesize \faBook}\textbf{ Publications}}
+ \resumeSubHeadingListStart
+  \resumePublication
+      {Edit Distance of Finite-Valued Transducers}{\textit{ICALP 2026 (to appear)}}
+      {Co-authors: Dr.~Saina Sunny.}{Jul 7, 2026}
+     % \vspace{-2.0mm}
+  \resumePublication
+      {Synthesizing POMDP Policies: Sampling Meets Model-checking via Learning}{\textit{CAV 2026 (to appear)}}
+      {Co-authors: Dr.~Debraj Chakraborty, Dr.~Anirban Majumdar, Dr.~Sayan Mukherjee, Prof.~Jean-François Raskin.}{Jul 26, 2026}
+  %    \vspace{-2.0mm}
+
+   \resumeSubheading
+      {Scalable Learning of One-Counter Automata via State-Merging Algorithms \Link{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSTTCS.2025.35}{[Link]}}{\textit{FSTTCS 2025}}
+      {Co-authors: Dr.~Shibashis Guha, Dr.~Anirban Majumdar, Dr.~Sreejith A.V.}{Sep 8, 2025}
+    %  \vspace{-2.0mm}
+  \resumeSubheading
+      {Learning Deterministic One-Counter Automata in Polynomial Time \Link{https://ieeexplore.ieee.org/document/11186276}{[Link]}}{\textit{LICS 2025}}
+      {Co-authors: Dr.~Vincent Penelle, Dr.~Sreejith A.V.}{Mar 7, 2025}
+     % \vspace{-2.0mm}
+   \resumeSubheading
+      {Learning Real-time One-Counter Automata Using Polynomially Many Queries \Link{https://link.springer.com/chapter/10.1007/978-3-031-90643-5_14}{[Link]}}{\textit{TACAS 2025}}
+      {Co-authors: Dr.~Vincent Penelle, Dr.~Sreejith A.V.}{May 1, 2025}
+   %   \vspace{-2.0mm}
+   \resumeSubheading
+      {\text{Equivalence of Deterministic Weighted Real-time One-Counter Automata} \ \ \ \ \ \ \Link{https://link.springer.com/chapter/10.1007/978-3-031-89610-1_13}{[Link]}}{\textit{ICLA 2025}}
+      {Co-authors: Dr.~Vincent Penelle, Dr.~Prakash Saivasan, Dr.~Sreejith A.V.}{Feb 3, 2025}
+  %    \vspace{-2.0mm}
+       \resumeSubheading
+      {Weighted One-Deterministic-Counter Automata \Link{https://doi.org/10.4230/LIPIcs.FSTTCS.2023.39}{[Link]}}{\textit{FSTTCS 2023}}
+      {Co-authors: Dr.~Vincent Penelle, Dr.~Prakash Saivasan, Dr.~Sreejith A.V.}{December 12, 2023}
+   %   \vspace{-2.0mm}
+        \resumeSubheading
+      {CAP: A Cellular Automata Based Fuzzy Classifier \Link{https://doi.org/10.1016/j.matpr.2022.02.284}{[Link]} }{\textit{Materials Today Proceedings}}
+      {Co-authors: Dr.~Abdul Nizar M}{February 26, 2022}
+   %   \vspace{-2.0mm} 
+          \resumeSubheading
+      {Optical Music Recognition Using Image Processing and Machine Learning \Link{https://www.ijcseonline.org/full_spl_paper_view.php?paper_id=519}{[Link]}}{\textit{IJCSE 2018}}
+      {Co-authors: Rahul Vijayakumar, Aju Tom Kuriakose, Jesmy Sunny, Dr.~Ramani Bai V}{August 11, 2018}
+ %     \vspace{-2.0mm} 
+       \resumeSubheading
+      {Survey on Fuzzy Logic \& Fuzzy Classifiers Based on Continuous Cellular Automata}{\textit{NCTT 2016}}
+      {Co-authors: Dr.~Abdul Nizar M}{August 20, 2016}
+   %   \vspace{-2.0mm} 
+      
+% \vspace{-8pt}  
+ \resumeSubHeadingListEnd
+
+%\vspace{.3cm}
+%-----------EXPERIENCE-----------------
+\section{{\footnotesize \faBriefcase}\textbf{ Experience}}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      {Université Libre de Bruxelles}{}
+      {Postdoctoral Researcher}{November 2025 to present}
+      %\vspace{-2.0mm}
+      
+      \JRF
+      {Indian Institute of Technology Goa}{}
+      {Junior Research Fellow}{\textit{January 2025 to October 2025}}{January 2024 to July 2024}
+      {February 2018 to December 2018}
+      \vspace{-2.0mm}
+%      \resumeItemListStart
+%    \item {Work description line 1}
+%    \item {Work description line 2}
+%    \resumeItemListEnd
+
+    \resumeSubheading
+      {Tata Elxsi, Trivandrum}{}
+      {Senior Engineer}{January 2017 to January 2018}
+      \vspace{-2.0mm}
+%      \resumeItemListStart
+%    \item {Work description line 1}
+%    \item {Work description line 2}
+%    \resumeItemListEnd
+    \resumeSubheading
+      {Central Polytechnic College, Trivandrum}{}
+      {Guest Lecturer}{June 2016 to October 2016}
+      \vspace{-2.0mm}
+%      \resumeItemListStart
+%    \item {Work description line 1}
+%    \item {Work description line 2}
+%    \resumeItemListEnd
+    
+    \vspace{6 mm}
+    
+      
+  \resumeSubHeadingListEnd
+\vspace{-8.5mm}
+
+ \vspace{.3cm}
+ \section{{\footnotesize \faMicrophone}\textbf{ Important Talks}}
+  \resumeSubHeadingListStart
+  \talkPoint{Synthesizing POMDP Policies: Sampling Meets Model-checking via Learning, AQUARIUM 2026}{March 24, 2026}
+  \talkPoint{Learning Deterministic One-Counter Automata, RP 2025} {October 2, 2025}
+   \talkPoint{Learning Deterministic One-Counter Automata in Polynomial Time, LICS 2025} {June 24, 2025}
+ \talkPoint{Learning Real-Time One-Counter Automata Using Polynomially Many Queries, TACAS 2025 \Link{https://www.youtube.com/watch?v=Se0Cw9hiFy4}{[Talk]}} {May 6, 2025}
+   \resumePoint{Weighted One-Deterministic-Counter Automata (Lightning Talk), ACM ARCS 2025}{Feb 27, 2025}
+    \resumePoint{Equivalence of Deterministic Weighted Real-time One-Counter Automata, ICLA 2025}{Feb 3, 2025}
+  \talkPoint{Learning Real-Time One-Counter Automata Using Polynomially Many Queries, RHPL 2024 \Link{https://www.youtube.com/live/mZ-DoJV8M9M?si=_0uTLdy1RQUpB20X\&t=3300}{[Talk]}}{Dec 18, 2024}
+   \resumePoint{Learning one-counter automata using SAT solver, Highlights 2024 \Link{https://plmbox.math.cnrs.fr/d/842a02badc75464b9cdd/files/?p=\%2F4-Thursday\%2FSession_6_Automata\%2F2-Prince_Mathew.mp4}{[Talk]}}{Sep 19, 2024}
+   \resumePoint{Weighted one deterministic-counter automata, FSTTCS 2023 \Link{https://www.youtube.com/live/nWBfj0wzY18?si=X1AjFms3EN-VcHls&t=9895}{[Talk]}}{July 2023}
+  \resumePoint{One deterministic-counter automata, Highlights 2023 \Link{https://uni-kassel.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=097fe15b-74dd-47c1-bf23-b04b00c98cf6&start=1128.1917782978653}{[Talk]}}{July 2023} %of Logic, Games and Automata 
+\resumePoint{Weighted one-deterministic-counter automata, FM Update Meeting 2023 \Link{https://www.youtube.com/watch?v=dkBPlRkqrrw}{[Talk]}}{June 2023}
+ \resumeSubHeadingListEnd
+ 
+  \vspace{.3cm}
+ \section{{\footnotesize \faMicrophone}\textbf{ Other Talks}}
+  \resumeSubHeadingListStart
+   \talkPoint{Synthesizing POMDP Policies: Sampling Meets Model-checking via Learning, CFV Seminar, ULB, 2026}{March 6, 2026}
+     \talkPoint{Learning Deterministic One-Counter Automata in Polynomial Time, IIT Bombay}{July 18, 2025}
+   \talkPoint{Learning Real-Time One-Counter Automata Using Polynomially Many Queries, TIFR Mumbai}{April 4, 2025}
+      \talkPoint{Learning One-Counter Automata Using SAT Solver, Université Libre de Bruxelles, Belgium}{September 10, 2024}
+        \talkPoint{Learning One-Counter Automata Using SAT Solver, Université de Mons, Belgium}{September 9, 2024}
+        \talkPoint{Learning One-Counter Automata Using SAT Solver, RWTH Aachen University, Germany}{September 6, 2024}
+%\resumePoint{One deterministic-counter automata, CS seminar talk, IIT Goa}{February 2023}
+\resumePoint{CAP: A cellular automata-based fuzzy classifier, AIES 2021}{December 2021}
+%\resumePoint{Learning regular sets from queries and counterexamples, CS research talk, IIT Goa}{September 2021}
+%\resumePoint{Equivalence of deterministic one-counter automata, Automata series talk, IIT Goa}{June 2020}
+\resumePoint{Optical music recognition using image processing and machine learning, IJCSE 2018}{August 2018}
+\vspace{-2.0mm}
+ \resumeSubHeadingListEnd
+
+ \vspace{-.45mm}
+ \section{{\footnotesize \faHandsHelping}\textbf{ Community Services}}
+  \resumeSubHeadingListStart
+\resumePoint{Sub-reviewer for the International Conference on Concurrency Theory (CONCUR), 2023}{}
+\resumePointt{Sub-reviewer for the IARCS Annual Conference on Foundations of Software 
+Technology and Theoretical Computer Science (FSTTCS), 2024.}{}
+\resumePoint{Sub-reviewer for the International Conference on Concurrency Theory (CONCUR), 2023}{}
+\resumePoint{Reviewed NPTEL transcripts for the course ``Theory of Computation'' by Prof.~Somenath Biswas}{}
+ \resumeSubHeadingListEnd
+  \vspace{.3cm}
+  \section{{\footnotesize \faUniversity}\textbf{ Awards and Recognitions}}
+  \resumeSubHeadingListStart
+      \resumePoint
+      {Received grant from Google for our work on learning one-counter automata}{May 2025}
+  \resumePoint
+      {Received ACM/IARCS travel grant for attending LICS 2025}{May 2025}
+  	\resumePoint
+      {Selected for scholarship for the Logic Mentoring Workshop at LICS 2025}{April 2025}
+      \talkPoint
+      {Successfully defended my Ph.D. dissertation titled ``Learning and Equivalence of one-counter systems''}{April, 2025}
+  \resumePoint
+  	{ Awarded with the ETAPS 2025 scholarship for participating in TACAS 2025}{April 2025}
+	\resumePoint
+      {Awarded with the ACM/IARCS travel grant for attending TACAS 2025}{April 2025}
+      \resumePoint
+      {Received travel grant from ACM India for attending ARCS 2025}{March 2025}
+      	\resumePoint
+      {Received invitation from ACM India to present our work at ARCS 2025}{December 2024}
+        \talkPoint
+      {Received grants from RWTH Aachen University, Germany and University of Antwerp, Belgium for research visits}{September 2024}
+      
+      \vspace{-2.0mm}
+ \resumeSubHeadingListEnd
+ \vspace{.3cm}
+ 
+ \vspace{.3cm}
+  \section{{\footnotesize \faUniversity}\textbf{ Research Visits}}
+  \resumeSubHeadingListStart
+        \resumePoint
+      {Tata Institute of Fundamental Research (TIFR), Mumbai, India}{July 16 to July 22, 2025}
+      \resumePoint
+      {Tata Institute of Fundamental Research (TIFR), Mumbai, India}{March 24 to April 4, 2025}
+  \resumePoint
+      {University of Antwerp, Belgium}{Sep 9 to 13, 2024}
+  	\resumePoint
+      {RWTH Aachen University, Germany}{Sep 4 to 6, 2024}
+      \resumePoint
+      {The Institute of Mathematical Sciences, HBNI, India}{June 1 to 30, 2022}
+      \vspace{-2.0mm}
+ \resumeSubHeadingListEnd
+ \vspace{.3cm}
+
+
+
+%-----------Technical skills-----------------
+
+% \section{{\footnotesize \faIdBadge}\textbf{ Positions of Responsibility}}
+%  \resumeSubHeadingListStart
+%       \resumePoint
+%{Member: Senate Students Advisory Committee, IIT Goa}{2019 -- 2021}
+% \resumePoint
+% {Class Representative, College of Engineering Trivandrum, MTech Batch of 2016}
+%		{2014 -- 2016}
+%\resumePoint
+%		{Class Representative, Saintgits College of Engineering Trivandrum, BTech Batch of 2014}
+%		{2013 -- 2014}
+%	\resumePoint
+%		{Troop Leader, 101-st Kottayam Scout Group}
+%		{2005 -- 2007}
+%
+%        \resumeSubHeadingListEnd
+ 
+ 
+ \section{{\footnotesize \faMicrophone}\textbf{ Teaching Assistance}}
+  \resumeSubHeadingListStart
+  \resumePoint{Embedded Systems Design}{Winter 2025-26}
+\resumePoint{Introduction to Computing}{Spring 2020 -- 21, Autumn 2023 -- 24}
+\resumePoint{Randomised Algorithms}{Spring 2022 -- 23}
+\resumePoint{Software Tools}{Spring 2022 -- 23}
+\resumePoint{Data Structures and Algorithms}{Autumn 2022 -- 23, Summer 2022, Autumn 2021 -- 22, Autumn 2020 -- 21}
+\resumePoint{Automata Theory}{Spring 2020 -- 21, Spring 2018 -- 19}
+\resumePoint{Logic in Computer Science}{Autumn 2019 -- 20}
+\resumePoint{Advanced Algorithms}{Spring 2018 -- 19}
+%\vspace{-2.0mm}
+ \resumeSubHeadingListEnd
+ 
+ \vspace{-.45mm}
+ %-----------EDUCATION-----------
+%\vspace{.3cm}
+\section{{\footnotesize \faUserGraduate}\textbf{ Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Technology Goa}{CPI: 8.45}%{CGPA/Percentage: xxx}
+      {Ph.D. in Theoretical Computer Science}{ January 2019 to December 2024}
+    \resumeSubSubheading
+      {Chennai Mathematical Institute, Tamil Nadu}{}%{CGPA/Percentage: xxx}
+      {Ph.D. Coursework}{January 2020 to April 2020}
+    \resumeSubheading
+      {College of Engineering Trivandrum, Kerala}{CGPA: 9.11}%{CGPA/Percentage: xxx}
+      {M.Tech in Computer Science and Engineering}{August 2014 to April 2016}
+       \resumeSubheading
+      {Saintgits Engineering College, Kerala}{CGPA: 7.62}%{CGPA/Percentage: xxx}
+      {B.Tech in Computer Science and Engineering}{July 2010 to April 2014}
+      \resumeSubheading
+      {Don Bosco Higher Secondary School, Kottayam, Kerala}{Aggregate: \textbf{86.36} \%}
+      {Class 12}{2008 to 2010}
+      \resumeSubheading
+      {Don Bosco Higher Secondary School, Kottayam, Kerala}{CGPA: \textbf{10/10} }
+      {Class 10}{2007 to 2008}
+%       \resumeSubheading
+%      {Don Bosco Higher Secondary School, Kottayam, Kerala}{}%{CGPA/Percentage: xxx}
+%      {H.S.C}{2008-2010}
+%       \resumeSubheading
+%      {Don Bosco Higher Secondary School, Kottayam, Kerala}{}%{CGPA/Percentage: xxx}
+%      {S.S.L.C}{2008}
+  \resumeSubHeadingListEnd
+  
+ \vspace{-.45mm}
+ \section{{\footnotesize \faMedal}\textbf{ Other Activities}}
+  \resumeSubHeadingListStart
+\resumePoint{Volunteered and contributed towards the successful organisation of FSTTCS 2021 and FSTTCS 2022}{}
+\resumePoint{Volunteered in organising Formal Methods Update Meeting 2023}{}
+\resumePoint{Volunteered in organising the Indian School on Logic and its Applications 2024}{}
+    \resumePoint
+{PG representative in the Senate Students Advisory Committee, IIT Goa from 2019 to 2021}{}
+\resumePoint{Member of the evaluation team for the national level technical project exhibition - SRISHTI 2025}{}
+\resumePoint{Successfully cleared the UGC NET examination and have met the eligibility criteria for lectureship}{}%Qualified for lectureship: UGC NET}{}
+\resumePoint{Passed BEC Vantage conducted by the University of Cambridge}{}
+\resumePoint{Passed grade 5 vocals with merit conducted by Trinity College London}{}
+\resumePoint{Passed grade 3 piano with merit conducted by Trinity College London}{}
+%\resumePoint{Earned the ``Rashtrapathi Scout'' award}{}
+%FSTTCS 2021,2020
+      %\vspace{-2.0mm}
+ \resumeSubHeadingListEnd
+ 
+ %-----------PROJECTS-----------------
+\section{{\footnotesize \faUsers}\textbf{ Projects}}
+\resumeSubHeadingListStart
+    \resumeProject
+      {CPLUS} %Project Name
+      {A tool for strategy synthesis for partially observable Markov decision processes.} %Project Name, Location Name
+      {November 2025 to April 2026} %Event Dates
+      
+       \resumeItemListStart
+        \item {Tools \& technologies used: Python}
+        \item {This tool is associated with our paper ``Synthesizing POMDP Policies: Sampling Meets Model-checking via
+Jul 26, 2026
+Learning'' that will appear in CAV 2026.}
+    	\resumeItemListEnd
+    \vspace{-2mm}
+    
+    \resumeProject
+      {OCA-L*} %Project Name
+      {A tool for active learning of one-counter automata using RPNI.} %Project Name, Location Name
+      {June 2025 to August 2025} %Event Dates
+      
+       \resumeItemListStart
+        \item {Tools \& technologies used: Python}
+        \item {This tool is associated with our paper ``Scalable Learning of One-Counter Automata via State-Merging Algorithms '' that appeared in FSTTCS 2025.\\
+        Code: \Link{https://zenodo.org/records/17310292} {zenodo.org/records/17310292}} 
+    	\resumeItemListEnd
+    \vspace{-2mm}
+    
+    \resumeProject
+      {MinOCA} %Project Name
+      {A tool for active learning of one-counter automata using polynomially many queries} %Project Name, Location Name
+      {January 2024 to December 2024} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: Python}
+        \item {This tool is associated with our paper ``Learning Real-Time One-Counter Automata Using Polynomially Many Queries'' that appeared in TACAS 2025.\\
+        Code: \Link{https://zenodo.org/records/14604419} {zenodo.org/records/14604419} }
+    	\resumeItemListEnd
+    \vspace{-2mm}
+    
+    \resumeProject
+      {MoES - River Width Extraction Project} %Project Name
+      {Web application for MoES for calculating river water discharge from satellite images.} %Project Name, Location Name
+      {February 2018 to December 2018} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: Python, Django}
+        \item {This work was done as a part of a joint project with Dr.~Sreejith A.V (IIT Goa)\\ and Dr.~Gaurav Kumar (IISER Bhopal). }
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+    \resumeProject
+      {Skill Center - Tata Elxsi} %Project Name
+      {Web application to manage employee profiles of Tata Elxsi.} %Project Name, Location Name
+      {January 2017 - February 2018} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: C\#, MVC, .NET}
+        \item {The application manages skills, project allocation, training, funnel management, performance evaluations, and resume creation. It helps assign projects based on employee skills, plan and track training, search for employees, assess performance, and create resumes.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+     \resumeProject
+      {Fuzzy Classifier using Continuous Cellular Automata\Link{https://github.com/prince-iitgoa/MTechThesis/blob/2730cbee1c01d083b2ae111fa307019a33a2d726/MTechThesis.pdf} { [Report]}\Link{https://github.com/prince-iitgoa/MTechThesis}{[Code]}} %Project Name
+      {Continuous cellular automata-based fuzzy classifier in Java using Weka.} %Project Name, Location Name
+      {June 2015 - September 2016} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: Java, Weka}
+        \item {Project done as part of Masters degree thesis.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+     \resumeProject
+      {Open Image Transcriptor\Link{https://github.com/prince-iitgoa/BtechProject/blob/d9e0ac81f9b8bce125dc41e2bd2d6472a0888027/BTechProjectReport.pdf} { [Report]}\Link{https://github.com/prince-iitgoa/BtechProject}{[Code]}} %Project Name
+      {Image processing tool to recognise musical notes from sheet music and convert it into a MIDI file.} %Project Name, Location Name
+      {June 2013 - June 2014} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: Java, Python}
+        \item {Project done as part of Undergraduate project.}
+    \resumeItemListEnd
+   % \vspace{-2mm}
+      
+  \resumeSubHeadingListEnd
+\vspace{-.45mm}
+%\section{{\footnotesize \faUser}\textbf{ Personal Information}}
+%\vspace{-5.5mm}
+%{\singlespacing \begin{align*}
+%&\text{Date of Birth} &:& \text{11-08-1992}\\
+%&\text{Gender} &:& \text{Male}\\
+%&\text{Citizenship} &:& \text{Indian}\\
+%&\text{Permanent Address} &:& \text{Kollaparampil House, Thachakunnu, Puthuppally P.O, Kottayam, PIN - 686011}
+%\end{align*}}
+%\vspace{-7.5mm}
+
+ %some talks
+% CS seminar talk : odca Friday, 24 Feb, 2023
+ %CS research talk Learning regular sets from queries and counterexamples September 20
+%AIES 2021 CAP: A cellular automata based fuzzy classifier December 8
+ %Automata Series Talk June 9 - August 8 (4 Sessions )
+ 
+ %Reviewing NPTEL transcripts Theory of Computation.
+%-----------Positions of Responsibility-----------------
+%\section{\textbf{Positions of Responsibility}}
+%\vspace{-0.4mm}
+%\resumeSubHeadingListStart
+%\resumePOR{Position, } % Position
+%    {Club or Event} %Club,Event
+%    {Position tenure} %Tenure Period
+%\resumePOR{Position, } % Position
+%    {Club or Event} %Club,Event
+%    {Position tenure} %Tenure Period
+%\resumeSubHeadingListEnd
+%\vspace{-5mm}
+%
+%
+%%web application is a tool that facilitates the organization and maintenance of employee information. It includes features for managing employee profiles, which may include personal details, job titles, and contact information. Additionally, it allows the recording and updating of employee skills and expertise, ensuring that the right people are assigned to the appropriate projects and tasks.
+%
+%Project allocation functionality enables managers to allocate projects and tasks based on employee skills, experience, and availability. This streamlines the process of assigning work to employees and ensures that the project is completed on time with the required quality.
+%
+%The application also includes a training management module, which can help plan, manage, and track employee training needs. This ensures that employees receive the necessary training and development to meet their job responsibilities and career objectives.
+%
+%A funnel management system is integrated into the application, allowing recruiters to manage job postings, candidate applications, and the hiring process. The application can manage candidate information and track their progress through the recruitment pipeline, from initial application to onboarding.
+%
+%The employee database search function allows users to find employees based on different criteria, such as skill sets, job titles, and location. This feature facilitates the identification of the right employees for specific projects or tasks.
+%
+%Employee rating and performance evaluation tools allow managers to assess employee performance, track progress, and identify areas for improvement. This feature ensures that employees receive regular feedback, leading to better performance and higher job satisfaction.
+%
+%Finally, the application includes a CV generation tool, allowing employees to create professional resumes based on their job experience, skills, and qualifications. This feature can be used to apply for internal or external job postings, resulting in career growth opportunities for employees.
+%
+%%-----------Achievements-----------------
+%\section{\textbf{Achievements}}
+%\vspace{-0.4mm}
+%\resumeSubHeadingListStart
+%\resumePOR{Achievement } % Award
+%    {description} % Event
+%    {Event dates} %Event Year
+%    
+%\resumePOR{Achievement } % Award
+%    {description} % Event
+%    {Event dates} %Event Year
+%\resumeSubHeadingListEnd
+%\vspace{-5mm}
+
+
+
+%-------------------------------------------
+\end{document}
