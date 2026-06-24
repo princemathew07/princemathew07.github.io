@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>LEARn | Prince Mathew</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic"
+        rel="stylesheet" type="text/css">
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link id="custom-style" rel="stylesheet" href="assets/css/mystyle.css">
+    <style>
+        .learn-visual {
+            width: min(92%, 900px);
+            height: auto;
+            margin: 10px auto 25px;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 0 .5rem .15rem rgba(0,0,0,.22);
+            background: white;
+        }
+
+        .learn-kicker {
+            color: #4b9be1;
+            font-weight: 700;
+        }
+
+        .learn-list li {
+            display: list-item;
+            margin-bottom: 9px;
+        }
+
+        .learn-facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .learn-fact {
+            background: #f8fbf5;
+            border-left: 4px solid #4b9be1;
+            padding: 14px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body class="learn-page">
+
+    <div class="mwrap">
+        <div class="mainbody">
+            <section class="profilecon" id="learn">
+                <div class="profilehead">
+                    <div>
+                        <img class="learn-visual" src="assets/images/learn-project.svg" alt="Abstract illustration of automata learning for pushdown systems" />
+                        <h1 class="Fname">Learning and Equivalence of Automata with Resources</h1>
+                        <h3 class="taglin">LEARn | F.R.S.-FNRS Research Project</h3>
+                    </div>
+                </div>
+
+                <div class="summaryprof">
+                    <p style="text-align: justify; text-justify: inter-word;">
+                        <span class="learn-kicker">LEARn</span> develops algorithms and tools for learning and equivalence checking of automata with resources, with a focus on models that can represent nested structures, stacks, counters, weights, and other forms of computational memory.
+                    </p>
+                    <p style="text-align: justify; text-justify: inter-word;">
+                        The project starts from a practical challenge: modern software systems exchange large amounts of structured data, especially JSON. Correct schemas are essential for validation, API contracts, and safe tool use in LLM-based systems, but writing and maintaining them manually is difficult. LEARn studies how automata learning can infer such structure automatically while preserving formal guarantees.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-3"><a href="index.html#home">Back to homepage</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section summary-section" id="overview">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-project-diagram"></i></span>Overview</h2>
+                <div class="summary">
+                    <p style="text-align: justify; text-justify: inter-word;">
+                        The primary aim of LEARn is to advance the theory and practice of learning and equivalence of automata with resources. The project initially focuses on learning visibly pushdown automata (VPA) for JSON schema inference, and then studies equivalence checking for weighted stack-deterministic pushdown automata (SDPDA).
+                    </p>
+                    <p style="text-align: justify; text-justify: inter-word;">
+                        Visibly pushdown automata are a natural formal model for nested data such as JSON, XML, HTML, and program traces. By learning VPA from schemas, examples, or black-box validators, the project aims to synthesize formal models that can be used for validation, analysis, and verification.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section summary-section" id="motivation">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-compass"></i></span>Motivation</h2>
+                <div class="summary">
+                    <p style="text-align: justify; text-justify: inter-word;">
+                        Active automata learning constructs a model by asking structured queries to a black-box system. This is powerful for software verification, but learning models with memory, such as counters and stacks, is substantially harder than learning finite automata. For pushdown systems, equivalence checking is often the dominant bottleneck, so better equivalence algorithms directly support better learning algorithms.
+                    </p>
+                    <p style="text-align: justify; text-justify: inter-word;">
+                        LEARn builds on recent results showing that meaningful subclasses of one-counter automata can be learned efficiently, and asks how far these ideas can be pushed toward richer stack-based models.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section summary-section" id="themes">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-lightbulb"></i></span>Research Themes</h2>
+                <div class="summary">
+                    <ul class="learn-list">
+                        <li><b>Learning VPA for JSON schemas:</b> design scalable active learning algorithms for nested data formats, building on recent progress in learning one-counter automata.</li>
+                        <li><b>Richer query models:</b> study practical query types such as stack-content queries, where the learner can inspect the current stack during learning.</li>
+                        <li><b>Weighted SDPDA equivalence:</b> develop equivalence algorithms for weighted pushdown models with stack determinacy, including synchronised and deterministic real-time subclasses.</li>
+                        <li><b>Automata with additional resources:</b> explore active and passive learning for models with resources such as stacks, counters, weights, and timing constraints.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section summary-section" id="objectives">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-bullseye"></i></span>Objectives</h2>
+                <div class="summary">
+                    <div class="learn-facts">
+                        <div class="learn-fact"><b>Infer schemas:</b><br>derive visibly pushdown models from JSON schemas, examples, or black-box validators.</div>
+                        <div class="learn-fact"><b>Scale learning:</b><br>reduce query counts and learning time for large alphabets and complex nested data.</div>
+                        <div class="learn-fact"><b>Check equivalence:</b><br>develop algorithms for weighted stack-deterministic pushdown models over fields.</div>
+                        <div class="learn-fact"><b>Build tools:</b><br>produce open-source prototypes and benchmarks for realistic validation scenarios.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section summary-section" id="outputs">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-tools"></i></span>Algorithms and Tools</h2>
+                <div class="summary">
+                    <p style="text-align: justify; text-justify: inter-word;">
+                        A central goal of the project is to deliver both theory and usable prototypes. The planned toolchain includes a schema-to-VPA learner, a streaming validator based on learned VPA, and benchmarks for comparing learning time, query complexity, model size, validation speed, and memory use.
+                    </p>
+                    <p style="text-align: justify; text-justify: inter-word;">
+                        The implementation will use and contribute to existing automata-learning ecosystems such as LearnLib and AutomataLib where appropriate. Case studies will include real and synthetic JSON datasets, open-source schemas, and validation scenarios for API messages.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section summary-section" id="evaluation">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-chart-line"></i></span>Evaluation</h2>
+                <div class="summary">
+                    <p style="text-align: justify; text-justify: inter-word;">
+                        The project will evaluate learned models on real and synthetic JSON datasets, including schemas and documents from open repositories. Experiments will measure membership and equivalence queries, learning time, model size, validation speed, and memory usage, with special attention to large and streaming JSON inputs.
+                    </p>
+                    <p style="text-align: justify; text-justify: inter-word;">
+                        Case studies will test whether automata-based validation can detect errors or improve performance compared with standard validation tools.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section summary-section" id="impact">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-globe"></i></span>Impact</h2>
+                <div class="summary">
+                    <ul class="learn-list">
+                        <li>Reduce human effort by automating the construction and maintenance of complex schemas.</li>
+                        <li>Increase trust in partially understood systems by synthesising formal models with correctness guarantees.</li>
+                        <li>Support safer JSON-based interactions in APIs, validation frameworks, and LLM tool-calling workflows.</li>
+                        <li>Extend automata learning beyond regular languages toward richer stack-based and weighted models.</li>
+                        <li>Advance equivalence-checking techniques for models connected to probabilistic and weighted pushdown systems.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        $(".navitem").click(function () {
+            $(this).toggleClass("selected").siblings().removeClass("selected");
+        });
+
+        $("#header_parent").css("height", "35px");
+    </script>
+</body>
+
+</html>
