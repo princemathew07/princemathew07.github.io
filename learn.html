@@ -58,7 +58,6 @@
             <section class="profilecon" id="learn">
                 <div class="profilehead">
                     <div>
-                        <img class="learn-visual" src="assets/images/learn-project.svg" alt="Abstract illustration of automata learning for pushdown systems" />
                         <h1 class="Fname">Learning and Equivalence of Automata with Resources</h1>
                         <h3 class="taglin">LEARn | F.R.S.-FNRS Research Project</h3>
                     </div>
@@ -66,10 +65,11 @@
 
                 <div class="summaryprof">
                     <p style="text-align: justify; text-justify: inter-word;">
-                        <span class="learn-kicker">LEARn</span> develops algorithms and tools for learning and equivalence checking of automata with resources, with a focus on models that can represent nested structures, stacks, counters, weights, and other forms of computational memory.
+                        <span class="learn-kicker">LEARn</span> LEARn develops algorithms and tools for learning and equivalence checking of automata with resources: computational models equipped with memory such as stacks, counters, weights, or mechanisms for representing nested structure.
                     </p>
                     <p style="text-align: justify; text-justify: inter-word;">
-                        The project starts from a practical challenge: modern software systems exchange large amounts of structured data, especially JSON. Correct schemas are essential for validation, API contracts, and safe tool use in LLM-based systems, but writing and maintaining them manually is difficult. LEARn studies how automata learning can infer such structure automatically while preserving formal guarantees.
+                        The project is motivated by a practical challenge. Modern software systems routinely exchange large volumes of structured data, particularly in formats such as JSON. Reliable schemas are crucial for data validation, API contracts, and the safe use of tools by LLM-based systems, yet designing and maintaining these schemas by hand is often difficult and error-prone. 
+                        LEARn investigates how automata learning can infer such structure automatically while retaining the formal guarantees needed for verification, analysis, and reliable software development.
                     </p>
                     <div class="row">
                         <div class="col-md-3"><a href="index.html#home">Back to homepage</a></div>
@@ -81,10 +81,11 @@
                 <h2 class="section-title"><span class="icon-holder"><i class="fas fa-project-diagram"></i></span>Overview</h2>
                 <div class="summary">
                     <p style="text-align: justify; text-justify: inter-word;">
-                        The primary aim of LEARn is to advance the theory and practice of learning and equivalence of automata with resources. The project initially focuses on learning visibly pushdown automata (VPA) for JSON schema inference, and then studies equivalence checking for weighted stack-deterministic pushdown automata (SDPDA).
-                    </p>
+                       The central goal of LEARn is to advance both the theory and practical use of learning and equivalence checking for automata with resources. The project begins by studying the learning of visibly pushdown automata (VPA) for JSON schema inference, before extending its focus to equivalence checking for subclasses of weighted stack-deterministic pushdown automata (SDPDA).
+                    </p>    
                     <p style="text-align: justify; text-justify: inter-word;">
-                        Visibly pushdown automata are a natural formal model for nested data such as JSON, XML, HTML, and program traces. By learning VPA from schemas, examples, or black-box validators, the project aims to synthesize formal models that can be used for validation, analysis, and verification.
+                        Visibly pushdown automata provide a natural formalism for data with nested structure, including JSON, XML, HTML, and program execution traces. By learning VPA from example documents, or black-box validators, LEARn aims to automatically construct formal models of structured data formats.
+                        These learned models can then support validation, automated analysis, and formal verification.
                     </p>
                 </div>
             </section>
@@ -93,10 +94,13 @@
                 <h2 class="section-title"><span class="icon-holder"><i class="fas fa-compass"></i></span>Motivation</h2>
                 <div class="summary">
                     <p style="text-align: justify; text-justify: inter-word;">
-                        Active automata learning constructs a model by asking structured queries to a black-box system. This is powerful for software verification, but learning models with memory, such as counters and stacks, is substantially harder than learning finite automata. For pushdown systems, equivalence checking is often the dominant bottleneck, so better equivalence algorithms directly support better learning algorithms.
+                        Active automata learning constructs a model of an unknown system by posing structured queries to a black box. This approach is particularly valuable in software verification, where an explicit formal model may be unavailable or difficult to obtain directly. However, extending learning beyond finite automata to models with memory—such as counters and stacks—introduces substantial new challenges. 
+                    </p>
+                    <p style="text-align: justify; text-justify: inter-word;"></p>
+                        In practical learning settings, exact equivalence checking against the black-box system is usually unavailable. It is therefore replaced by conformance testing, which searches for discrepancies using carefully selected tests. For systems with stack-like memory, however, equivalence checking often remains the main theoretical and computational bottleneck. Developing stronger exact equivalence algorithms can reveal the structure, limitations, and algorithmic properties of these richer models. 
                     </p>
                     <p style="text-align: justify; text-justify: inter-word;">
-                        LEARn builds on recent results showing that meaningful subclasses of one-counter automata can be learned efficiently, and asks how far these ideas can be pushed toward richer stack-based models.
+                        LEARn builds on recent progress showing that the class of one-counter automata can be learned efficiently. It investigates how these ideas can be extended to richer models with stack-based memory, while using advances in exact equivalence checking to develop a deeper understanding of their behaviour and their potential for verification and analysis.
                     </p>
                 </div>
             </section>
