@@ -81,7 +81,7 @@
                 <h2 class="section-title"><span class="icon-holder"><i class="fas fa-project-diagram"></i></span>Overview</h2>
                 <div class="summary">
                     <p style="text-align: justify; text-justify: inter-word;">
-                       The central goal of LEARn is to advance both the theory and practical use of learning and equivalence checking for automata with resources. The project begins by studying the learning of visibly pushdown automata (VPA) for JSON schema inference, before extending its focus to equivalence checking for subclasses of weighted stack-deterministic pushdown automata (SDPDA).
+                       The central goal of LEARn is to advance both the theory and practical use of learning and equivalence checking for automata with resources. The project begins by studying the learning of visibly pushdown automata (VPA) for JSON schema inference, before extending its focus to equivalence checking for subclasses of weighted pushdown automata.
                     </p>    
                     <p style="text-align: justify; text-justify: inter-word;">
                         Visibly pushdown automata provide a natural formalism for data with nested structure, including JSON, XML, HTML, and program execution traces. By learning VPA from example documents, or black-box validators, LEARn aims to automatically construct formal models of structured data formats.
@@ -110,8 +110,8 @@
                 <div class="summary">
                     <ul class="learn-list">
                         <li><b>Learning VPA for JSON schemas:</b> design scalable active learning algorithms for nested data formats, building on recent progress in learning one-counter automata.</li>
-                        <li><b>Richer query models:</b> study practical query types such as stack-content queries, where the learner can inspect the current stack during learning.</li>
-                        <li><b>Weighted SDPDA equivalence:</b> develop equivalence algorithms for weighted pushdown models with stack determinacy, including synchronised and deterministic real-time subclasses.</li>
+                        <li><b>Richer query models:</b> study practical query types where the learner can obtain more information regarding the system's internal state during learning.</li>
+                        <li><b>Weighted SDPDA equivalence:</b> develop equivalence algorithms for subclasses of weighted pushdown models, including synchronised and deterministic real-time machines.</li>
                         <li><b>Automata with additional resources:</b> explore active and passive learning for models with resources such as stacks, counters, weights, and timing constraints.</li>
                     </ul>
                 </div>
@@ -123,7 +123,7 @@
                     <div class="learn-facts">
                         <div class="learn-fact"><b>Infer schemas:</b><br>derive visibly pushdown models from JSON schemas, examples, or black-box validators.</div>
                         <div class="learn-fact"><b>Scale learning:</b><br>reduce query counts and learning time for large alphabets and complex nested data.</div>
-                        <div class="learn-fact"><b>Check equivalence:</b><br>develop algorithms for weighted stack-deterministic pushdown models over fields.</div>
+                        <div class="learn-fact"><b>Check equivalence:</b><br>develop algorithms for weighted pushdown models over fields.</div>
                         <div class="learn-fact"><b>Build tools:</b><br>produce open-source prototypes and benchmarks for realistic validation scenarios.</div>
                     </div>
                 </div>
