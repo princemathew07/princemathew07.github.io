@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>LEARn | Prince Mathew</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic"
+        rel="stylesheet" type="text/css">
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link id="custom-style" rel="stylesheet" href="assets/css/mystyle.css">
+    <style>
+        .learn-visual {
+            width: min(92%, 900px);
+            height: auto;
+            margin: 10px auto 25px;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 0 .5rem .15rem rgba(0,0,0,.22);
+            background: white;
+        }
+
+        .learn-kicker {
+            color: #4b9be1;
+            font-weight: 700;
+        }
+
+        .learn-list li {
+            display: list-item;
+            margin-bottom: 9px;
+        }
+
+        .learn-facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .learn-fact {
+            background: #f8fbf5;
+            border-left: 4px solid #4b9be1;
+            padding: 14px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XYG0NN7BM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8XYG0NN7BM');
+</script>
+<body class="learn-page">
+
+    <div class="mwrap">
+        <div class="mainbody">
+            <section class="profilecon" id="learn">
+                <div class="profilehead">
+                    <div>
+                        <h1 class="Fname">Learning and Equivalence of Automata with Resources</h1>
+                        <h3 class="taglin">LEARn | F.R.S.-FNRS Research Project</h3>
+                    </div>
+                </div>
+
+                <div class="summaryprof">
+                    <p style="text-align: justify; text-justify: inter-word;">
+                        <span class="learn-kicker">LEARn</span> LEARn develops algorithms and tools for learning and equivalence checking of automata with resources: computational models equipped with memory such as stacks, counters, weights, or mechanisms for representing nested structure.
+                    </p>
+                    <p style="text-align: justify; text-justify: inter-word;">
+                        The project is motivated by a practical challenge. Modern software systems routinely exchange large volumes of structured data, particularly in formats such as JSON. Reliable schemas are crucial for data validation, API contracts, and the safe use of tools by LLM-based systems, yet designing and maintaining these schemas by hand is often difficult and error-prone. 
+                        LEARn investigates how automata learning can infer such structure automatically while retaining the formal guarantees needed for verification, analysis, and reliable software development.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-3"><a href="index.html#home">Back to homepage</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section summary-section" id="overview">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-project-diagram"></i></span>Overview</h2>
+                <div class="summary">
+                    <p style="text-align: justify; text-justify: inter-word;">
+                       The central goal of LEARn is to advance both the theory and practical use of learning and equivalence checking for automata with resources. The project begins by studying the learning of visibly pushdown automata (VPA) for JSON schema inference, before extending its focus to equivalence checking for subclasses of weighted pushdown automata.
+                    </p>    
+                    <p style="text-align: justify; text-justify: inter-word;">
+                        Visibly pushdown automata provide a natural formalism for data with nested structure, including JSON, XML, HTML, and program execution traces. By learning VPA from example documents, or black-box validators, LEARn aims to automatically construct formal models of structured data formats.
+                        These learned models can then support validation, automated analysis, and formal verification.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section summary-section" id="motivation">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-compass"></i></span>Motivation</h2>
+                <div class="summary">
+                    <p style="text-align: justify; text-justify: inter-word;">
+                        Active automata learning constructs a model of an unknown system by posing structured queries to a black box. This approach is particularly valuable in software verification, where an explicit formal model may be unavailable or difficult to obtain directly. However, extending learning beyond finite automata to models with memory—such as counters and stacks—introduces substantial new challenges. 
+                    </p>
+                    <p style="text-align: justify; text-justify: inter-word;"></p>
+                        In practical learning settings, exact equivalence checking against the black-box system is usually unavailable. It is therefore replaced by conformance testing, which searches for discrepancies using carefully selected tests. For systems with stack-like memory, however, equivalence checking often remains the main theoretical and computational bottleneck. Developing stronger exact equivalence algorithms can reveal the structure, limitations, and algorithmic properties of these richer models. 
+                    </p>
+                    <p style="text-align: justify; text-justify: inter-word;">
+                        LEARn builds on recent progress showing that the class of one-counter automata can be learned efficiently. It investigates how these ideas can be extended to richer models with stack-based memory, while using advances in exact equivalence checking to develop a deeper understanding of their behaviour and their potential for verification and analysis.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section summary-section" id="themes">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-lightbulb"></i></span>Research Themes</h2>
+                <div class="summary">
+                    <ul class="learn-list">
+                        <li><b>Learning VPA for JSON schemas:</b> design scalable active learning algorithms for nested data formats, building on recent progress in learning one-counter automata.</li>
+                        <li><b>Richer query models:</b> study practical query types where the learner can obtain more information regarding the system's internal state during learning.</li>
+                        <li><b>Weighted SDPDA equivalence:</b> develop equivalence algorithms for subclasses of weighted pushdown models, including synchronised and deterministic real-time machines.</li>
+                        <li><b>Automata with additional resources:</b> explore active and passive learning for models with resources such as stacks, counters, weights, and timing constraints.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section summary-section" id="objectives">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-bullseye"></i></span>Objectives</h2>
+                <div class="summary">
+                    <div class="learn-facts">
+                        <div class="learn-fact"><b>Infer schemas:</b><br>derive visibly pushdown models from JSON schemas, examples, or black-box validators.</div>
+                        <div class="learn-fact"><b>Scale learning:</b><br>reduce query counts and learning time for large alphabets and complex nested data.</div>
+                        <div class="learn-fact"><b>Check equivalence:</b><br>develop algorithms for weighted pushdown models over fields.</div>
+                        <div class="learn-fact"><b>Build tools:</b><br>produce open-source prototypes and benchmarks for realistic validation scenarios.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section summary-section" id="outputs">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-tools"></i></span>Algorithms and Tools</h2>
+                <div class="summary">
+                    <p style="text-align: justify; text-justify: inter-word;">
+                        A central goal of the project is to deliver both theory and usable prototypes. The planned toolchain includes a schema-to-VPA learner, a streaming validator based on learned VPA, and benchmarks for comparing learning time, query complexity, model size, validation speed, and memory use.
+                    </p>
+                    <p style="text-align: justify; text-justify: inter-word;">
+                        The implementation will use and contribute to existing automata-learning ecosystems such as LearnLib and AutomataLib where appropriate. Case studies will include real and synthetic JSON datasets, open-source schemas, and validation scenarios for API messages.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section summary-section" id="evaluation">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-chart-line"></i></span>Evaluation</h2>
+                <div class="summary">
+                    <p style="text-align: justify; text-justify: inter-word;">
+                        The project will evaluate learned models on real and synthetic JSON datasets, including schemas and documents from open repositories. Experiments will measure membership and equivalence queries, learning time, model size, validation speed, and memory usage, with special attention to large and streaming JSON inputs.
+                    </p>
+                    <p style="text-align: justify; text-justify: inter-word;">
+                        Case studies will test whether automata-based validation can detect errors or improve performance compared with standard validation tools.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section summary-section" id="impact">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-globe"></i></span>Impact</h2>
+                <div class="summary">
+                    <ul class="learn-list">
+                        <li>Reduce human effort by automating the construction and maintenance of complex schemas.</li>
+                        <li>Increase trust in partially understood systems by synthesising formal models with correctness guarantees.</li>
+                        <li>Support safer JSON-based interactions in APIs, validation frameworks, and LLM tool-calling workflows.</li>
+                        <li>Extend automata learning beyond regular languages toward richer stack-based and weighted models.</li>
+                        <li>Advance equivalence-checking techniques for models connected to probabilistic and weighted pushdown systems.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        $(".navitem").click(function () {
+            $(this).toggleClass("selected").siblings().removeClass("selected");
+        });
+
+        $("#header_parent").css("height", "35px");
+    </script>
+</body>
+
+</html>
