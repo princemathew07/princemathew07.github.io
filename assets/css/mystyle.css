@@ -463,10 +463,7 @@ body {
   box-shadow: 0 10px 26px rgba(27, 55, 84, 0.08);
 }
 
-.profilecon:hover,
-.section:hover {
-  box-shadow: 0 14px 34px rgba(27, 55, 84, 0.14);
-}
+
 
 .profilehead {
   position: relative;
