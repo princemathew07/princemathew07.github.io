@@ -200,6 +200,43 @@
             .active, .collapsible:hover{
             background-color: aliceblue;
             }
+            /* Swaps a collapsible button's label between its "more" and "less" state,
+               reusing the .active class the existing collapsible click handler already toggles. */
+            .collapsible .less-label {
+            display: none;
+            }
+            .active .more-label {
+            display: none;
+            }
+            .active .less-label {
+            display: inline;
+            }
+            /* Makes the "More/Less about me" collapsible button look like a .button-link
+               button (e.g. "Read more about LEARn") instead of the plain white collapsible bar. */
+            .more-about-me-btn {
+            display: inline-flex;
+            width: auto;
+            flex: 0 0 auto;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+            padding: 6px 12px;
+            border-radius: 5px;
+            background: #1865ba;
+            color: #ffffff;
+            font-weight: 700;
+            line-height: 1.2;
+            box-shadow: 0 5px 14px rgba(24, 101, 186, 0.18);
+            }
+            .more-about-me-btn:hover,
+            .more-about-me-btn.active {
+            background: #124f92;
+            color: #ffffff;
+            }
+            .more-about-me-btn:after,
+            .more-about-me-btn.active:after {
+            content: none;
+            }
             .row{
                 padding-bottom: 7px;
             }
