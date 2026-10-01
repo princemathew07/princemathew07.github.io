@@ -188,6 +188,14 @@
             transition: max-height 1s ease-out;
             }
 
+            /* Collapsible wrapper for a group of entries (e.g. older publications). Kept separate
+               from .content so the ".content .row a" button styling does not reach the entries inside. */
+            .collapsible-group {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1s ease-out;
+            }
+
             .collapsible:after {
             content: '\1F704';
             color: black;

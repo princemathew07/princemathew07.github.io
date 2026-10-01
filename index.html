@@ -726,6 +726,11 @@ We further present a method for combining OPNI with active learning of DROCA, an
                             </div>
                         </div>
                     </div><!--//summary-->
+                    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; margin-top: 10px;">
+                    <button class="collapsible more-about-me-btn" style="margin: 0 24px 0 0;">
+                        <span class="more-label">See older publications</span><span class="less-label">Hide older publications</span>
+                    </button>
+                    <div class="collapsible-group" style="flex-basis: 100%;">
                     <div class="summary">
                         <button class="collapsible">
                             <div class="row papertitle">CAP: A Cellular Automata Based Fuzzy Classifier</div>
@@ -841,6 +846,8 @@ We further present a method for combining OPNI with active learning of DROCA, an
                                     target="_blank">click here</a></div>
                         </div>
                     </div>
+                    </div><!--//older publications content-->
+                    </div><!--//older publications row-->
 
                 </section>
                 
@@ -1698,6 +1705,11 @@ We further present a method for combining OPNI with active learning of DROCA, an
                     content.style.maxHeight = null;
                 } else {
                     content.style.maxHeight = content.scrollHeight + "px";
+                }
+                // Let an enclosing open collapsible (e.g. older publications) grow to fit this one.
+                var outer = this.parentElement.closest(".collapsible-group");
+                if (outer && outer.style.maxHeight) {
+                    outer.style.maxHeight = (outer.scrollHeight + content.scrollHeight) + "px";
                 }
             });
         }
