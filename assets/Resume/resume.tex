@@ -27,6 +27,7 @@
 \usepackage{fontawesome5}
 \usepackage{multicol}
 \usepackage{graphicx}
+\usepackage[export]{adjustbox}
 \usepackage{cfr-lm}
 \usepackage[T1]{fontenc}
 \setlength{\multicolsep}{0pt} 
@@ -180,7 +181,7 @@
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%
 %%%%%% DEFINE ELEMENTS HERE %%%%%%%
 \newcommand{\name}{Prince Mathew} % Your Name
-\newcommand{\course}{Postdoctoral Researcher} % Your Program
+\newcommand{\course}{F.R.S.-FNRS Postdoctoral Researcher} % Your Program
 \newcommand{\roll}{} % Your Roll No.
 \newcommand{\phone}{+32 472 49 71 20} % Your Phone Number
 \newcommand{\emaila}{prince.mathew@ulb.be} %Email 1
@@ -200,10 +201,10 @@
 }
 \parbox{\dimexpr\linewidth-5.15cm\relax}{
 \begin{tabularx}{\linewidth}{L B} \\
-  \textbf{\Large \name} & \href{tel:+32 472 49 71 20} {\raisebox{0.0\height}{\footnotesize \faPhone}\ \phone}\\
-  {\course} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
- Computer Science Department &  \href{https://orcid.org/0000-0001-6410-1474}{\raisebox{0.0\height}{\footnotesize \faOrcid}\ {0000-0001-6410-1474}}\\ 
-  {Université Libre de Bruxelles}  &  \href{https://princemathew07.github.io/}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {princemathew07}} \\
+  \textbf{\Large \name} & \href{tel:+32 472 49 71 20} {\raisebox{0.0\height}} \\%\\{\footnotesize \faPhone}\ \phone}\\
+  {\course} & \raisebox{.08cm}[0pt][0pt]{\adjincludegraphics[height=.75cm,trim={.07\width} {.33\height} {.12\width} {.30\height},clip]{../images/fnrs_banner.png}} \\
+ Computer Science Department & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  {Université Libre de Bruxelles}  &  \href{https://orcid.org/0000-0001-6410-1474}{\raisebox{0.0\height}{\footnotesize \faOrcid}\ {0000-0001-6410-1474}}\\ 
  % & \href{https://www.yourLinkedinProfile.com/in/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
 \end{tabularx}
 }
@@ -217,7 +218,8 @@
 %\vspace{5mm}
 \section{{\footnotesize \faGraduationCap}\textbf{ Career Profile}}
 \vspace{.1cm}
-I am a postdoctoral researcher in the Formal Methods and Verification group at Université Libre de Bruxelles, working on strategy synthesis for partially observable Markov decision processes. My research lies at the intersection of automata theory, formal verification, learning, and synthesis. During my PhD at IIT Goa and my subsequent research fellowship there, I focused on the learning and equivalence of one-counter systems. More broadly, I develop efficient algorithms with formal correctness guarantees, with an emphasis on active automata learning, equivalence checking, synthesis, and implementable verification methods.
+I am an F.R.S.-FNRS Postdoctoral Researcher (CR) in the Formal Methods and Verification group at the Université Libre de Bruxelles,   where I lead the project Learning and Equivalence of Automata with Resources (LEARn). 
+My research lies at the intersection of automata theory, formal verification, learning, and synthesis. 
 %
 
 \vspace{.3cm}
@@ -272,8 +274,13 @@ I am a postdoctoral researcher in the Formal Methods and Verification group at U
 \section{{\footnotesize \faBriefcase}\textbf{ Experience}}
   \resumeSubHeadingListStart
   \resumeSubheading
+    {Université Libre de Bruxelles}{}
+  {F.R.S.-FNRS Postdoctoral Researcher (Chargé de recherches)}
+    {October 2026 to present}
+
+  \resumeSubheading
       {Université Libre de Bruxelles}{}
-      {Postdoctoral Researcher}{November 2025 to present}
+      {Postdoctoral Researcher}{November 2025 to September 2026}
       %\vspace{-2.0mm}
       
       \JRF
@@ -311,7 +318,7 @@ I am a postdoctoral researcher in the Formal Methods and Verification group at U
  \section{{\footnotesize \faCoins}\textbf{ Funded Projects}}
   \resumeSubHeadingListStart
   \resumeSubheading
-      {FNRS Chargé de Recherches (CR) Fellowship}{}
+      {F.R.S.-FNRS Chargé de Recherches (CR) Fellowship}{}
       {Learning and Equivalence of Automata with Resources (LEARn)}{October 2026 to September 2029}
       %\vspace{-2.0mm}
       \resumeSubHeadingListEnd
